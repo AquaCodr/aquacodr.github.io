@@ -61,4 +61,15 @@ nav:
   - 阅读: reading.md
   - 记忆碎片: memories.md
 
+# 额外配置
+extra:
+  generator: true
+  
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aquacodr
+      name: GitHub
+    - icon: fontawesome/regular/envelope
+      link: mailto:214977067@qq.com  # 我的邮箱
+      name: 联系我
 
