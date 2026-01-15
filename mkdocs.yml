@@ -80,9 +80,44 @@ extra:
 plugins:
   - search
 
+  #最后修改日期显示
+  - git-revision-date-localized:
+      enabled: true       # 启用插件
+      type: date         # 显示日期（如：2024年1月15日）
+      locale: zh_CN      # 中文显示     
+
+# Markdown 扩展
 # Markdown 扩展
 markdown_extensions:
-  - admonition
-  - codehilite
-  - toc:
-      permalink: true
+  # ========== 核心功能（5个） ==========
+  - admonition                    # 彩色提示框
+  
+  - toc:                           # 自动目录
+      permalink: true             # 标题可点击链接
+      toc_depth: 3                # 显示3级标题
+  
+  - pymdownx.highlight:            # 代码高亮
+      linenums: true              # 显示行号
+      anchor_linenums: true       # 行号可链接
+      line_spans: "line"          # 每行可单独引用
+  
+  - pymdownx.superfences:          # 增强代码块
+      custom_fences:
+        - name: mermaid           # 支持画流程图
+          class: mermaid
+  
+  - def_list                      # 定义列表
+  
+  # ========== 实用功能（5个） ==========
+  - pymdownx.details              # 折叠内容（去掉 deep: true）
+  
+  - pymdownx.emoji:                # Emoji表情
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+  - pymdownx.tasklist:             # 任务清单
+      custom_checkbox: true       # 自定义复选框样式
+  
+  - footnotes                     # 脚注
+  
+  - attr_list                     # 属性列表（给元素加样式）
