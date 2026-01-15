@@ -48,6 +48,17 @@ theme:
     - content.code.annotate
     - palette.toggle  # 日夜间切换按钮，必须启用
 
-# 文档与构建目录配置（默认值，可省略，明确写出更清晰）
-docs_dir: docs
-site_dir: site
+# 文档与构建目录
+nav:
+  - 主页: index.md
+  - 课程笔记: 
+    - 大学物理II: notes/大学物理II.md
+    - 概统: notes/概统.md
+    - 模电: notes/模电.md
+  - 工具:
+    - 开发工具: tools/dev.md
+    - 效率工具: tools/productivity.md
+  - 阅读: reading.md
+  - 记忆碎片: memories.md
+
+
