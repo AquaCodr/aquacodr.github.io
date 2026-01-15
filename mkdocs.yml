@@ -73,3 +73,13 @@ extra:
       link: mailto:214977067@qq.com  # 我的邮箱
       name: 联系我
 
+# 插件配置
+plugins:
+  - search
+
+# Markdown 扩展
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
