@@ -1,0 +1,13 @@
+# MkDocs 构建生成的静态文件目录（由 GitHub Actions 自动构建，本地无需提交）
+site/
+
+# Python 虚拟环境（若使用）
+venv/
+env/
+
+# 操作系统冗余文件
+.DS_Store
+Thumbs.db
+
+# IDE 配置文件（VS Code 等）
+.vscode/
