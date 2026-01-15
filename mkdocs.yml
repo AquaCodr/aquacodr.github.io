@@ -60,6 +60,7 @@ nav:
     - 效率工具: tools/productivity.md
   - 阅读: reading.md
   - 记忆碎片: memories.md
+  - 测试: 网站上传信息步骤.md
 
 # 左下角的版权声明
 copyright: Copyright &copy; 2026 AquaCodr/All Rights Reserved. 
@@ -120,4 +121,4 @@ markdown_extensions:
   
   - footnotes                     # 脚注
   
-  - attr_list                     # 属性列表（给元素加样式）
+  #- attr_list                     # 属性列表（给元素加样式）
