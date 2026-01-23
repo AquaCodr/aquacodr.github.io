@@ -39,7 +39,7 @@ theme:
     - search.highlight # 搜索出的文章关键词加入高亮
     - search.share #搜索分享按钮
     - navigation.expand # 打开Tab时左侧目录全部展开
-    - navigation.indexes #启用节索引页后，可以将文档直接附加到节
+    #- navigation.indexes #启用节索引页后，可以将文档直接附加到节
     - content.tabs.link
     - content.tooltips
     - content.code.copy #代码复制
@@ -52,9 +52,22 @@ theme:
 nav:
   - 主页: index.md
   - 课程笔记: 
-    - 大学物理II: notes/大学物理II.md
-    - 概统: notes/概统.md
-    - 模电: notes/模电.md
+    - 大学物理II: notes/physicsII.md
+    - 概统: 
+      - 说明: notes/gaitong/说明.md
+      - 随机事件与概率: notes/gaitong/ch1.md
+      - 一维随机变量及其分布: notes/gaitong/ch2.md
+      - 二维随机变量及其分布: notes/gaitong/ch3.md
+      - 随机变量的数字特征: notes/gaitong/ch4.md
+      - 大数定律及其中心极限定理: notes/gaitong/ch5.md
+      - 统计量与抽样分布: notes/gaitong/ch6.md
+      - 点估计: notes/gaitong/ch7.md
+      - 区间估计: notes/gaitong/ch8.md
+      - 假设检验: notes/gaitong/ch9.md
+    - 模电: notes/analogue_elec.md
+  - 自学笔记: 
+    - Harvard CS50: zixue/Harvard CS50.md
+    - CS61A: zixue/CS61A.md
   - 工具:
     - 开发工具: tools/dev.md
     - 效率工具: tools/productivity.md
@@ -76,6 +89,14 @@ extra:
     - icon: fontawesome/regular/envelope
       link: mailto:214977067@qq.com  # 我的邮箱
       name: 联系我
+  math: # 新增：公式渲染的 MathJax 配置
+    enable: true     
+
+# 新增：引入 MathJax 引擎（关键！）
+extra_javascript:
+  - js/mathjax-config.js  # 新增：自定义公式格式配置（关键！）
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  
 
 # 插件配置
 plugins:
@@ -122,3 +143,15 @@ markdown_extensions:
   - footnotes                     # 脚注
   
   #- attr_list                     # 属性列表（给元素加样式）
+  # ========== 新增：公式渲染扩展（关键！） ==========
+  - pymdownx.arithmatex:
+      generic: true  # 启用通用模式
+      # 新增：指定 Arithmatex 传递给 MathJax 的分隔符（和 MathJax 配置一致）
+      inline_syntax:
+        - "\\["   # 行内左分隔符
+        - "\\]"   # 行内右分隔符
+        - "\\$"   # 兼容 $ 行内
+      block_syntax:
+        - "\\[\\[" # 块级左分隔符
+        - "\\]\\]" # 块级右分隔符
+        - "\\$\\$" # 兼容 $$ 块级

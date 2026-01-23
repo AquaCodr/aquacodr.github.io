@@ -1,0 +1,37 @@
+# Harvard CS50自学笔记
+
+## 资源汇总
+
+[中文精翻课程](https://www.bilibili.com/video/BV1Rm421V7zw?vd_source=aa0467315d95e985795de47ab0bd1b54)
+
+[英文原声课程](https://www.bilibili.com/video/BV1Hr421F7VC?vd_source=aa0467315d95e985795de47ab0bd1b54)
+
+[cs50x | CS自学社区](https://www.learncs.site/docs/curriculum-resource/cs50x)
+
+## 学习笔记
+
+这是哈佛学院CS50 2023年春季课程笔记
+
+### week 0 Scratch
+
+> what ultimately matters in this course is not so much where you end up relative to your classmates but where you end up relative to yourself when you began
+
+bit
+
+1 byte = 8 bits
+
+kilobytes(KB),megabytes(MB),gigabytes(GB)
+
+Unary,Binary,Decimal 
+
+ASCII——数字和字母间的映射关系
+
+![ASCII 映射](https://www.learncs.site/assets/images/cs50Week0Slide93-77f49b95d596756f4fe9752473e06e50.png)
+
+RGB(Blue,Green,Red)
+
+pixel
+
+abstruction/algorithm
+
+[scratch](https://scratch.mit.edu) 是由麻省理工学院开发的可视化编程语言
