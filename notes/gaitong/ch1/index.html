@@ -735,7 +735,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        三、重点题型与解题套路
+        三、 重点题型与解题套路
       
     </span>
   </a>
@@ -746,7 +746,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        四、 查漏清单
+        四、 终极查漏清单
       
     </span>
   </a>
@@ -1457,7 +1457,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        三、重点题型与解题套路
+        三、 重点题型与解题套路
       
     </span>
   </a>
@@ -1468,7 +1468,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        四、 查漏清单
+        四、 终极查漏清单
       
     </span>
   </a>
@@ -1494,10 +1494,11 @@
 
 <h1 id="_1">第一章  随机事件与概率<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <div class="admonition note">
-<p class="admonition-title"> 记笔记 </p>
+<p class="admonition-title"> 笔记 </p>
 <p>这是整个学科的基石，核心在于“如何量化随机性”</p>
 </div>
-<h2 id="_2">一、 知识地图与逻辑关系<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<hr />
+<h2 id="_2"><strong>一、 知识地图与逻辑关系</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>主线：</strong>
 <strong>随机试验</strong> → <strong>样本空间</strong> → <strong>随机事件</strong> → <strong>事件的关系与运算</strong> → <strong>概率的定义与性质</strong> → <strong>条件概率</strong> → <strong>两大公式（乘法、全概率、贝叶斯）</strong> → <strong>独立性</strong></p>
 <p><strong>关键逻辑：</strong></p>
@@ -1507,118 +1508,107 @@
 <li><strong>独立性</strong>是事件间一种特殊的概率关系，它简化了计算。</li>
 </ol>
 <hr />
-<h2 id="_3">二、 核心知识点精讲与易错点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_3"><strong>二、 核心知识点精讲与易错点</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="1"><strong>1. 基本概念</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>1.1.<strong>随机试验 (E)：</strong> 可重复、结果明确、事先不可预知。</p>
-<p>1.2.<strong>样本空间 (Ω)：</strong> 所有可能结果的集合。</p>
-<p>1.3.<strong>随机事件 (A, B, C...)：</strong> 样本空间的子集。</p>
-<p>1.4.<strong>事件的关系与运算（用集合语言理解）</strong></p>
 <ul>
 <li>
-<p><strong>包含 (A⊂B)</strong>：A发生必导致B发生。</p>
+<p><strong>随机试验 (E)：</strong> 可重复、结果明确、事先不可预知。<strong>考点</strong>：识别一个描述是否为随机试验。</p>
 </li>
 <li>
-<p><strong>相等 (A=B)</strong>：A⊂B且B⊂A。</p>
+<p><strong>样本空间 (Ω)：</strong> 所有可能结果的集合。<strong>要点</strong>：根据问题描述正确写出样本空间（特别是古典概型）。</p>
 </li>
 <li>
-<p><strong>和/并 (A∪B)</strong>：A与B<strong>至少一个</strong>发生。</p>
+<p><strong>随机事件 (A, B, C...)：</strong> 样本空间的子集。<strong>易错</strong>：将“事件”与“结果”混淆。事件是结果的集合。</p>
 </li>
 <li>
-<p><strong>积/交 (A∩B 或 AB)</strong>：A与B<strong>同时</strong>发生。</p>
-</li>
-<li>
-<p><strong>差 (A-B)</strong>：A发生但B不发生。<code>A-B = A ∩ B̄</code></p>
-</li>
-<li>
-<p><strong>互斥/互不相容 (A∩B=Ø)</strong>：A与B<strong>不能同时</strong>发生。</p>
-</li>
-<li>
-<p><strong>对立/逆 (Ā)</strong>：“A不发生”。<strong>核心性质</strong>：<code>A∪Ā=Ω</code>, <code>A∩Ā=Ø</code>。</p>
+<p><strong>事件的关系与运算（用集合语言理解，重中之重！）</strong></p>
+<ul>
+<li><strong>包含 (A⊂B)</strong>：A发生必导致B发生。</li>
+<li><strong>相等 (A=B)</strong>：A⊂B且B⊂A。</li>
+<li><strong>和/并 (A∪B)</strong>：A与B<strong>至少一个</strong>发生。</li>
+<li><strong>积/交 (A∩B 或 AB)</strong>：A与B<strong>同时</strong>发生。</li>
+<li><strong>差 (A-B)</strong>：A发生但B不发生。<code>A-B = A ∩ B̄</code></li>
+<li><strong>互斥/互不相容 (A∩B=Ø)</strong>：A与B<strong>不能同时</strong>发生。</li>
+<li><strong>对立/逆 (Ā)</strong>：“A不发生”。<strong>核心性质</strong>：<code>A∪Ā=Ω</code>, <code>A∩Ā=Ø</code>。</li>
+</ul>
+<p><strong>运算律</strong>：交换、结合、分配律，以及<strong>德摩根律</strong>：<code>A∪B = Ā ∩ B̄</code>， <code>A∩B = Ā ∪ B̄</code>。<strong>常考</strong>：用德摩根律化简复杂事件表达式。</p>
 </li>
 </ul>
-<p><strong>运算律</strong>：交换、结合、分配律，以及<strong>德摩根律</strong>：<code>A∪B = Ā ∩ B̄</code>， <code>A∩B = Ā ∪ B̄</code> 。<strong>常考</strong>：用德摩根律化简复杂事件表达式。</p>
 <h3 id="2"><strong>2. 概率的定义与性质</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>公理化定义</strong>：概率 <code>P(·)</code> 是满足以下条件的函数：</li>
+<li><strong>公理化定义</strong>：概率 <code>P(·)</code> 是满足以下条件的函数：<ol>
 <li><strong>非负性</strong>：<code>P(A) ≥ 0</code></li>
 <li><strong>规范性</strong>：<code>P(Ω) = 1</code></li>
 <li><strong>可列可加性</strong>：对<strong>互斥</strong>事件 <code>A1, A2, ...</code>，有 <code>P(∪Ai) = ΣP(Ai)</code></li>
-<li><strong>核心性质（由公理推导，必须熟记）</strong>：</li>
+</ol>
+</li>
+<li><strong>核心性质（由公理推导，必须熟记）</strong>：<ol>
 <li><code>P(Ø) = 0</code></li>
 <li><strong>有限可加性</strong>：A， B互斥，则 <code>P(A∪B) = P(A) + P(B)</code></li>
 <li><code>P(Ā) = 1 - P(A)</code></li>
 <li><strong>减法公式</strong>：<code>P(A-B) = P(A) - P(AB)</code> （特别地，若 B⊂A，则 <code>P(A-B)=P(A)-P(B)</code>）</li>
-<li><strong>核心！加法公式</strong>：<code>P(A∪B) = P(A) + P(B) - P(AB)</code></li>
+<li><strong>核心！加法公式</strong>：<code>P(A∪B) = P(A) + P(B) - P(AB)</code><ul>
+<li><strong>易错/常考</strong>：求三个事件的并的概率公式：
+    <code>P(A∪B∪C) = P(A)+P(B)+P(C) - P(AB)-P(AC)-P(BC) + P(ABC)</code></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">常考</p>
-<p><code>P(A∪B∪C) = P(A)+P(B)+P(C) - P(AB)-P(AC)-P(BC) + P(ABC)</code></p>
-</div>
-<ol>
+</li>
 <li><strong>单调性</strong>：若 A⊂B，则 <code>P(A) ≤ P(B)</code></li>
 </ol>
+</li>
+</ul>
 <h3 id="3-key-concept"><strong>3. 条件概率（Key Concept！）</strong><a class="headerlink" href="#3-key-concept" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>定义</strong>：在事件B已发生的条件下，事件A发生的概率。
-  <code>P(A|B) = P(AB) / P(B)</code>， 要求 <code>P(B) &gt; 0</code>。</li>
+    <code>P(A|B) = P(AB) / P(B)</code>， 要求 <code>P(B) &gt; 0</code>。</li>
 <li><strong>本质</strong>：<strong>样本空间的缩小</strong>。新的样本空间就是B。</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title"> 易错点 </p>
-<ol>
+<li><strong>易错点</strong>：<ol>
 <li><code>P(A|B)</code> 与 <code>P(B|A)</code> 完全不同！贝叶斯公式就是连接它们的桥梁。</li>
 <li>条件概率本身也是概率，满足概率的所有公理和性质（如 <code>P(Ā|B)=1-P(A|B)</code>）。</li>
 </ol>
-</div>
+</li>
+</ul>
 <h3 id="4"><strong>4. 三大公式</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>乘法公式（由条件概率定义直接推出）</strong>：
-   <code>P(AB) = P(A)P(B|A) = P(B)P(A|B)</code></li>
+    <code>P(AB) = P(A)P(B|A) = P(B)P(A|B)</code><ul>
 <li><strong>推广</strong>：<code>P(A1A2...An) = P(A1)P(A2|A1)P(A3|A1A2)...P(An|A1A2...An-1)</code></li>
-<li>
-<p><strong>应用场景</strong>：涉及“分步发生”、“同时发生”且非独立的事件。</p>
+<li><strong>应用场景</strong>：涉及“分步发生”、“同时发生”且非独立的事件。</li>
+</ul>
 </li>
-<li>
-<p><strong>全概率公式（由因推果）</strong>：</p>
+<li><strong>全概率公式（由因推果）</strong>：<ul>
+<li><strong>前提</strong>：事件组 <code>B1, B2, ..., Bn</code> 是样本空间Ω的一个<strong>划分</strong>（即互斥且并集为Ω）。</li>
+<li><strong>公式</strong>：<code>P(A) = Σ_{i=1}^{n} P(Bi)P(A|Bi)</code></li>
+<li><strong>直观理解</strong>：事件A可以通过多种不同的“原因”<code>Bi</code>导致发生，总的概率就是各种原因导致A发生的概率之和。</li>
+<li><strong>易错点</strong>：<strong>划分的完备性</strong>必须检查！<code>B1∪...∪Bn = Ω</code> 且 <code>Bi∩Bj=Ø</code>。</li>
+</ul>
 </li>
-<li>
-<p><strong>前提</strong>：事件组 <code>B1, B2, ..., Bn</code> 是样本空间Ω的一个<strong>划分</strong>（即互斥且并集为Ω）。</p>
-</li>
-<li>
-<p><strong>公式</strong>：<code>P(A) = Σ_{i=1}^{n} P(Bi)P(A|Bi)</code></p>
-</li>
-<li>
-<p><strong>直观理解</strong>：事件A可以通过多种不同的“原因”<code>Bi</code>导致发生，总的概率就是各种原因导致A发生的概率之和。</p>
-</li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title"> 易错点:划分的完备性必须检查！</p>
-<p><code>B1∪...∪Bn = Ω</code> 且 <code>Bi∩Bj=Ø</code>。</p>
-</div>
-<ol>
-<li>
-<p><strong>贝叶斯公式（执果索因）</strong>：</p>
-</li>
-<li>
-<p><strong>公式</strong>：<code>P(Bj|A) = [P(Bj)P(A|Bj)] / [Σ_{i=1}^{n} P(Bi)P(A|Bi)]</code></p>
-</li>
+<li><strong>贝叶斯公式（执果索因）</strong>：<ul>
+<li><strong>公式</strong>：<code>P(Bj|A) = [P(Bj)P(A|Bj)] / [Σ_{i=1}^{n} P(Bi)P(A|Bi)]</code></li>
 <li><strong>直观理解</strong>：在知道结果A发生的情况下，<strong>推断</strong>是由哪个原因<code>Bj</code>引起的可能性有多大。<code>P(Bj)</code>称为<strong>先验概率</strong>，<code>P(Bj|A)</code>称为<strong>后验概率</strong>。</li>
 <li><strong>核心考点</strong>：与全概率公式结合考查。分母就是全概率公式的 <code>P(A)</code>。</li>
+</ul>
+</li>
 </ol>
 <h3 id="5"><strong>5. 独立性</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>定义</strong>：事件A与B独立 ⇔ <code>P(AB) = P(A)P(B)</code>。</li>
+<li><strong>定义</strong>：事件A与B独立 ⇔ <code>P(AB) = P(A)P(B)</code>。<ul>
 <li>若 <code>P(B)&gt;0</code>，也等价于 <code>P(A|B) = P(A)</code>。即B的发生不影响A的概率。</li>
-<li><strong>性质</strong>：</li>
+</ul>
+</li>
+<li><strong>性质</strong>：<ol>
 <li>若A与B独立，则A与<code>B̄</code>、<code>Ā</code>与B、<code>Ā</code>与<code>B̄</code>都独立。</li>
 <li><strong>互斥 vs 独立（极易混淆！）</strong>：<ul>
-<li>若 <code>P(A)&gt;0</code>, <code>P(B)&gt;0</code>：</li>
+<li>若 <code>P(A)&gt;0</code>, <code>P(B)&gt;0</code>：<ul>
 <li>若A, B<strong>互斥</strong>，则 <code>P(AB)=0</code> ≠ <code>P(A)P(B)&gt;0</code>，所以它们<strong>不独立</strong>。</li>
 <li>若A, B<strong>独立</strong>，则 <code>P(AB)&gt;0</code>，所以它们<strong>不互斥</strong>。</li>
+</ul>
+</li>
 <li><strong>结论</strong>：对于概率为正的事件，<strong>互斥与独立不可能同时成立</strong>（除非概率为0）。互斥是集合关系，独立是概率关系。</li>
 </ul>
 </li>
-<li><strong>多个事件的独立性</strong>：</li>
+</ol>
+</li>
+<li><strong>多个事件的独立性</strong>：<ul>
 <li>三个事件A, B, C<strong>相互独立</strong>，必须同时满足：<ol>
 <li><code>P(AB) = P(A)P(B)</code></li>
 <li><code>P(AC) = P(A)P(C)</code></li>
@@ -1626,66 +1616,55 @@
 <li><code>P(ABC) = P(A)P(B)P(C)</code></li>
 </ol>
 </li>
+<li><strong>前三条叫“两两独立”</strong>。<strong>两两独立 ≠ 相互独立</strong>。常考反例。</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title"> 常考反例 </p>
-<p><strong>前三条叫“两两独立”</strong>。<strong>两两独立 ≠ 相互独立</strong>。</p>
-</div>
-<hr />
-<h2 id="_4">三、重点题型与解题套路<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>复杂事件的概率计算</strong>：</li>
-</ol>
-<p><strong>步骤</strong>：① 用字母表示事件；② 用集合运算描述目标事件；③ 利用概率公式计算。</p>
-<p><strong>技巧</strong>：善用对立事件 <code>P(A)=1-P(Ā)</code>， 尤其是当“至少一个”出现时。</p>
-<ol>
-<li><strong>“分步”或“顺序”问题（使用乘法公式）</strong>：</li>
-</ol>
-<p>例如：不放回抽签、零件依次装配等。</p>
-<ol>
-<li><strong>“由多个原因导致一个结果”问题（使用全概率公式）</strong>：</li>
-</ol>
-<p>题干常出现：“……来自三个不同的工厂/渠道”，“……由三种原因导致”。</p>
-<ol>
-<li>
-<p><strong>“已知结果，反推原因”问题（使用贝叶斯公式）</strong>：
-题干常出现：“已知检测呈阳性，问真正患病的概率是多少？”，“产品不合格，问它是甲车间生产的概率是多少？”。</p>
 </li>
-<li>
-<p><strong>独立性判断与应用</strong>：
-判断：严格用定义 <code>P(AB)=P(A)P(B)</code> 检查。
-应用：若事件独立，则求交事件的概率可简化为概率的乘积。</p>
+</ul>
+<hr />
+<h2 id="_4"><strong>三、 重点题型与解题套路</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>复杂事件的概率计算</strong>：<ul>
+<li><strong>步骤</strong>：① 用字母表示事件；② 用集合运算描述目标事件；③ 利用概率公式计算。</li>
+<li><strong>技巧</strong>：善用对立事件 <code>P(A)=1-P(Ā)</code>， 尤其是当“至少一个”出现时。</li>
+</ul>
+</li>
+<li><strong>“分步”或“顺序”问题（使用乘法公式）</strong>：<ul>
+<li>例如：不放回抽签、零件依次装配等。</li>
+</ul>
+</li>
+<li><strong>“由多个原因导致一个结果”问题（使用全概率公式）</strong>：<ul>
+<li>题干常出现：“……来自三个不同的工厂/渠道”，“……由三种原因导致”。</li>
+</ul>
+</li>
+<li><strong>“已知结果，反推原因”问题（使用贝叶斯公式）</strong>：<ul>
+<li>题干常出现：“已知检测呈阳性，问真正患病的概率是多少？”，“产品不合格，问它是甲车间生产的概率是多少？”。</li>
+</ul>
+</li>
+<li><strong>独立性判断与应用</strong>：<ul>
+<li>判断：严格用定义 <code>P(AB)=P(A)P(B)</code> 检查。</li>
+<li>应用：若事件独立，则求交事件的概率可简化为概率的乘积。</li>
+</ul>
 </li>
 </ol>
 <hr />
-<h2 id="_5">四、 查漏清单<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_5"><strong>四、 终极查漏清单</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>回答以下问题，检验你是否真的掌握了：</p>
 <ol>
-<li>
-<p><strong>基础</strong>：<code>P(A)=0.5, P(B)=0.6, P(A∪B)=0.8</code>， 你能立刻求出 <code>P(AB)</code> 和 <code>P(A-B)</code> 吗？</p>
+<li><strong>基础</strong>：<code>P(A)=0.5, P(B)=0.6, P(A∪B)=0.8</code>， 你能立刻求出 <code>P(AB)</code> 和 <code>P(A-B)</code> 吗？<ul>
+<li>（答案：<code>P(AB)=0.3</code>, <code>P(A-B)=0.2</code>）</li>
+</ul>
 </li>
-<li>
-<p><strong>理解</strong>：<code>P(A|B)</code> 和 <code>P(B|A)</code> 的区别是什么？能举个例子吗？</p>
+<li><strong>理解</strong>：<code>P(A|B)</code> 和 <code>P(B|A)</code> 的区别是什么？能举个例子吗？</li>
+<li><strong>辨析</strong>：A, B互斥，且 <code>P(A)&gt;0, P(B)&gt;0</code>，它们独立吗？为什么？</li>
+<li><strong>公式</strong>：写出A, B, C三个事件全都不发生的概率表达式。<ul>
+<li>（答案：<code>P(ĀB̄C̄) = 1 - P(A∪B∪C)</code>， 再用三事件加法公式展开）</li>
+</ul>
 </li>
-<li>
-<p><strong>辨析</strong>：A, B互斥，且 <code>P(A)&gt;0, P(B)&gt;0</code>，它们独立吗？为什么？</p>
-</li>
-<li>
-<p><strong>公式</strong>：写出A, B, C三个事件全都不发生的概率表达式。</p>
-</li>
-<li>
-<p><strong>流程</strong>：面对一个贝叶斯问题（如诊断问题），你的解题步骤是怎样的？</p>
+<li><strong>流程</strong>：面对一个贝叶斯问题（如诊断问题），你的解题步骤是怎样的？<ul>
+<li>（步骤：① 定义事件，如H=患病，T=阳性；② 写出已知条件 <code>P(H)</code>, <code>P(T|H)</code>, <code>P(T|H̄)</code>；③ 用全概求 <code>P(T)</code>；④ 用贝叶斯求 <code>P(H|T)</code>）</li>
+</ul>
 </li>
 </ol>
-<details class="note">
-<summary>点击查看答案</summary>
-<ol>
-<li><code>P(AB)=0.3</code>, <code>P(A-B)=0.2</code></li>
-<li><code>P(ĀB̄C̄) = 1 -P(A∪B∪C)</code>， 再用三事件加法公式展开）
-5.步骤：① 定义事件，如H=患病，T=阳性；② 写出已知条件 <code>P(H)</code>, <code>P(T|H)</code>, <code>P(T|H̄)</code>；③ 用全概求 <code>P(T)</code>；④ 用贝叶斯求<code>P(H|T)</code>）</li>
-</ol>
-</details>
-<hr />
 <p>花20分钟把这些基础概念、关系和公式在白纸上整理一遍，形成你自己的逻辑图。这是你后续学习随机变量、统计推断的坚实地面。</p>
 
 
@@ -1707,7 +1686,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年1月23日 03:47:05 UTC">2026年1月23日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年1月23日 04:03:17 UTC">2026年1月23日</span>
   </span>
 
     
