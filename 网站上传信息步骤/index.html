@@ -1851,6 +1851,19 @@
 <p>效果如下：</p>
 <p>这是一个带有脚注的句子<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>。</p>
 <p>另一个脚注<sup id="fnref:note"><a class="footnote-ref" href="#fn:note">2</a></sup>。</p>
+<h1 id="_6">测试公式渲染<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<h2 id="_7">行内公式（[] 格式）<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>样本方差公式：[ S^2 = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \overline{X})^2 ]</p>
+<h2 id="_8">块级公式（[[]] 格式）<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>[[
+\int_{-\infty}^{+\infty} f(x) dx = 1
+]]</p>
+<h2 id="_9">兼容原有 $/$$ 格式（仍可用）<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>行内：$E=mc^2$
+块级：
+$$
+\sum_{k=1}^n k = \frac{n(n+1)}{2}
+$$</p>
 <div class="footnote">
 <hr />
 <ol>
@@ -1993,6 +2006,10 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/mathjax-config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
