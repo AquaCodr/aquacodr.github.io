@@ -18,7 +18,7 @@
 
 这是哈佛学院CS50 2023年春季课程笔记
 
-### Lecture 0 Scratch
+### Lecture 0 Scratch 2026.1.23
 
 > what ultimately matters in this course is not so much where you end up relative to your classmates but where you end up relative to yourself when you began
 
@@ -44,7 +44,7 @@ abstruction/algorithm
 
 [作业：我制作的scratch小游戏](https://scratch.mit.edu/projects/1270436180)
 
-### Lecture 1 C
+### Lecture 1 C 2026.1.25
 
 source code / machine code
 

@@ -38,7 +38,7 @@ theme:
     - search.suggest # 搜索输入一些字母时推荐补全整个单词
     - search.highlight # 搜索出的文章关键词加入高亮
     - search.share #搜索分享按钮
-    - navigation.expand # 打开Tab时左侧目录全部展开
+    #- navigation.expand # 打开Tab时左侧目录全部展开
     #- navigation.indexes #启用节索引页后，可以将文档直接附加到节
     - content.tabs.link
     - content.tooltips
@@ -66,6 +66,7 @@ nav:
       - 假设检验: notes/gaitong/ch9.md
     - 模电: notes/analogue_elec.md
   - 自学笔记: 
+    - 学习路线: zixue/plan.md
     - Harvard CS50: zixue/Harvard CS50.md
     - CS61A: zixue/CS61A.md
   - 工具:
