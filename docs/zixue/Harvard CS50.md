@@ -8,11 +8,17 @@
 
 [cs50x | CS自学社区](https://www.learncs.site/docs/curriculum-resource/cs50x)
 
+[scratch](https://scratch.mit.edu) 是由麻省理工学院开发的可视化编程语言
+
+[VS Code 线上网站](https://code.cs50.io)
+
+[C语言简化手册](https://manual.cs50.io)
+
 ## 学习笔记
 
 这是哈佛学院CS50 2023年春季课程笔记
 
-### week 0 Scratch
+### Lecture 0 Scratch
 
 > what ultimately matters in this course is not so much where you end up relative to your classmates but where you end up relative to yourself when you began
 
@@ -35,3 +41,16 @@ pixel
 abstruction/algorithm
 
 [scratch](https://scratch.mit.edu) 是由麻省理工学院开发的可视化编程语言
+
+[作业：我制作的scratch小游戏](https://scratch.mit.edu/projects/1270436180)
+
+### Lecture 1 C
+
+source code / machine code
+
+terminal(CLI,command line interface/命令行界面)
+
+GUI，graphical user interface/图形用户界面
+
+[C语言简化手册](https://manual.cs50.io)
+

@@ -71,7 +71,10 @@ nav:
   - 工具:
     - 开发工具: tools/dev.md
     - 效率工具: tools/productivity.md
-  - 阅读: reading.md
+  - 阅读: 
+    - 说明: reading/reading.md
+    - 讲座: 
+      - 程乐松：我们总把别人的片段拼凑成理想的自己，却忘了当下的自己已经是生命奇迹: reading/jiangzuo/yixi_chenglesong.md
   - 记忆碎片: memories.md
   - 测试: 网站上传信息步骤.md
 
