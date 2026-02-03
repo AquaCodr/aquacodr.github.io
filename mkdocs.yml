@@ -74,6 +74,10 @@ nav:
     - 效率工具: tools/productivity.md
   - 阅读: 
     - 说明: reading/reading.md
+    - 读书: 
+        调香师日记: reading/book/tiaoxiang.md
+        月亮与六便士: reding/book/liubianshi.md
+        悉达多: reading/book/xidaduo.md
     - 讲座: 
       - 程乐松——道家人生哲学: reading/jiangzuo/yixi_chenglesong.md
       - 松本哉——一种随性的生活方式: reading/jiangzuo/yixi_songbenzai.md
