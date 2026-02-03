@@ -75,8 +75,20 @@ nav:
   - 阅读: 
     - 说明: reading/reading.md
     - 讲座: 
-      - 程乐松：我们总把别人的片段拼凑成理想的自己，却忘了当下的自己已经是生命奇迹: reading/jiangzuo/yixi_chenglesong.md
-  - 记忆碎片: memories.md
+      - 程乐松——道家人生哲学: reading/jiangzuo/yixi_chenglesong.md
+      - 松本哉——一种随性的生活方式: reading/jiangzuo/yixi_songbenzai.md
+  - 记忆碎片:
+      - 说明: memories/memories.md
+      - 似水流年: 
+          - 板块说明: memories/aqua/index.md
+          - 少年十七八岁时: memories/aqua/1718.md
+          - 转专业面试回忆: memories/aqua/interview.md
+      - 郁闷小屋: 
+          - 板块说明: memories/bitter/index.md
+          - 读《什么是大学》深夜emo: memories/bitter/emo25.md    
+      - 朝花夕拾:
+          - 板块说明: memories/ago/index.md
+          - 我和我的闺蜜: memories/ago/she_and_me.md
   - 测试: 网站上传信息步骤.md
 
 # 左下角的版权声明
