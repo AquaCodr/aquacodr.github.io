@@ -1,5 +1,3 @@
-# docs/阅读/.pages
 nav:
-  - 阅读: index.md   # 将 index.md 的内容直接绑定给“阅读”这个标题
-  - 书             # 下方的子文件夹
-  - 讲座
+  - index.md
+  - ...
