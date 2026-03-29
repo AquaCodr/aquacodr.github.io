@@ -1,177 +1,130 @@
-# 网站基础信息（必填，确保个人主页仓库匹配）
+# 网站基础信息
 site_name: AquaCodr's Blog
 site_description: 学以聚之，思以辨之，偶得而栖之
 site_author: AquaCodr
 site_url: https://aquacodr.github.io/
 
-# 主题配置（核心：Material 主题 + 日夜间模式 + 主题色，层级清晰）
+# 主题配置
 theme:
-  name: material  # 明确指定 Material 主题，确保本地和远程都能识别
-  language: zh  # 中文界面，提升使用体验
-  # 日夜间配色切换（无缩进错误，直接生效）
+  name: material
+  language: zh
+  icon:
+    logo: material/school-outline           # 新增：极简学术风 Logo
+  favicon: assets/favicon.svg
+  
+  # 定制字体：提升代码和正文的阅读质感
+  font:
+    text: Noto Sans SC       
+    code: JetBrains Mono     
+
+  # 日夜间沉浸配色切换
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue
-      accent: light blue
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/weather-sunny
         name: 切换到夜间模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: dark blue
-      accent: dark blue
+      primary: black
+      accent: indigo
       toggle:
         icon: material/weather-night
         name: 切换到浅色模式
-  # 启用核心功能（仅保留必要项，无冗余）
+
+  # 启用核心功能（已剔除冗余，加入性能优化与标签）
   features:
-    - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
-    # - navigation.instant
-    #- header.autohide  #自动隐藏
-    - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
-    - navigation.tabs #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
-    # - navigation.tabs.sticky  #启用粘性选项卡后，导航选项卡将锁定在标题下方，并在向下滚动时始终保持可见
-    - navigation.sections #启用部分后，顶级部分在边栏中呈现为1220px以上视口的组，但在移动设备上保持原样
-    - navigation.top # 返回顶部的按钮 在上滑时出现
-    - navigation.footer #页脚将呈现在边栏中，但在移动设备上保持原样
-    - search.suggest # 搜索输入一些字母时推荐补全整个单词
-    - search.highlight # 搜索出的文章关键词加入高亮
-    - search.share #搜索分享按钮
-    #- navigation.expand # 打开Tab时左侧目录全部展开
-    #- navigation.indexes #启用节索引页后，可以将文档直接附加到节
+    - announce.dismiss
+    - header.autohide       # 自动隐藏顶栏，提供沉浸阅读空间
+    - navigation.tracking
+    - navigation.tabs
+    #- navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.prune      # 精简左侧导航树，提升加载速度
+    - navigation.tags       # 新增：在文章顶部显示标签
+    - search.suggest
+    - search.highlight
+    - search.share
     - content.tabs.link
     - content.tooltips
-    - content.code.copy #代码复制
+    - content.code.copy
     - content.action.edit
     - content.action.view
     - content.code.annotate
-    - palette.toggle  # 日夜间切换按钮，必须启用
+    #- palette.toggle
 
-# 文档与构建目录
-nav:
-  - 主页: index.md
-  - 课程笔记: 
-    - 大学物理II: notes/physicsII.md
-    - 概统: 
-      - 说明: notes/gaitong/说明.md
-      - 随机事件与概率: notes/gaitong/ch1.md
-      - 一维随机变量及其分布: notes/gaitong/ch2.md
-      - 二维随机变量及其分布: notes/gaitong/ch3.md
-      - 随机变量的数字特征: notes/gaitong/ch4.md
-      - 大数定律及其中心极限定理: notes/gaitong/ch5.md
-      - 统计量与抽样分布: notes/gaitong/ch6.md
-      - 点估计: notes/gaitong/ch7.md
-      - 区间估计: notes/gaitong/ch8.md
-      - 假设检验: notes/gaitong/ch9.md
-    - 模电: notes/analogue_elec.md
-  - 自学笔记: 
-    - 学习路线: zixue/plan.md
-    - Harvard CS50: zixue/Harvard CS50.md
-    - CS61A: zixue/CS61A.md
-  - 工具:
-    - 开发工具: tools/dev.md
-    - 效率工具: tools/productivity.md
-  - 阅读: 
-    - 说明: reading/reading.md
-    - 读书: 
-        调香师日记: reading/book/tiaoxiang.md
-        月亮与六便士: reding/book/liubianshi.md
-        悉达多: reading/book/xidaduo.md
-    - 讲座: 
-      - 程乐松——道家人生哲学: reading/jiangzuo/yixi_chenglesong.md
-      - 松本哉——一种随性的生活方式: reading/jiangzuo/yixi_songbenzai.md
-  - 记忆碎片:
-      - 说明: memories/memories.md
-      - 似水流年: 
-          - 板块说明: memories/aqua/index.md
-          - 少年十七八岁时: memories/aqua/1718.md
-          - 转专业面试回忆: memories/aqua/interview.md
-      - 郁闷小屋: 
-          - 板块说明: memories/bitter/index.md
-          - 读《什么是大学》深夜emo: memories/bitter/emo25.md    
-      - 朝花夕拾:
-          - 板块说明: memories/ago/index.md
-          - 我和我的闺蜜: memories/ago/she_and_me.md
-  - 测试: 网站上传信息步骤.md
 
 # 左下角的版权声明
 copyright: Copyright &copy; 2026 AquaCodr/All Rights Reserved. 
 
-# 额外配置
+# 额外配置（已清理错误的 math 语法）
 extra:
   generator: true
-  
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/aquacodr
       name: GitHub
     - icon: fontawesome/regular/envelope
-      link: mailto:214977067@qq.com  # 我的邮箱
+      link: mailto:214977067@qq.com
       name: 联系我
-  math: # 新增：公式渲染的 MathJax 配置
-    enable: true     
 
-# 新增：引入 MathJax 引擎（关键！）
+# 引入 MathJax 引擎
 extra_javascript:
-  - js/mathjax-config.js  # 新增：自定义公式格式配置（关键！）
+  - js/mathjax-config.js  
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  
+
+# 新增：引入自定义 CSS 特效
+extra_css:
+  - stylesheets/custom.css
 
 # 插件配置
 plugins:
   - search
-
-  #最后修改日期显示
+  - roamlinks
+  - callouts
+  - awesome-pages:
+      collapse_single_pages: true
+  - tags                  # 新增：启用标签解析插件
   - git-revision-date-localized:
-      enabled: true       # 启用插件
-      type: date         # 显示日期（如：2024年1月15日）
-      locale: zh_CN      # 中文显示     
+      enabled: true
+      type: date
+      locale: zh_CN
 
-# Markdown 扩展
 # Markdown 扩展
 markdown_extensions:
-  # ========== 核心功能（5个） ==========
-  - admonition                    # 彩色提示框
-  
-  - toc:                           # 自动目录
-      permalink: true             # 标题可点击链接
-      toc_depth: 3                # 显示3级标题
-  
-  - pymdownx.highlight:            # 代码高亮
-      linenums: true              # 显示行号
-      anchor_linenums: true       # 行号可链接
-      line_spans: "line"          # 每行可单独引用
-  
-  - pymdownx.superfences:          # 增强代码块
+  # ========== 核心功能 ==========
+  - nl2br
+  - admonition                 
+  - toc:                           
+      permalink: true             
+      toc_depth: 3                
+  - pymdownx.highlight:            
+      linenums: true              
+      anchor_linenums: true       
+      line_spans: "line"          
+  - pymdownx.superfences:          
       custom_fences:
-        - name: mermaid           # 支持画流程图
+        - name: mermaid           
           class: mermaid
+  - def_list                      
   
-  - def_list                      # 定义列表
-  
-  # ========== 实用功能（5个） ==========
-  - pymdownx.details              # 折叠内容（去掉 deep: true）
-  
-  - pymdownx.emoji:                # Emoji表情
+  # ========== 实用功能 ==========
+  - pymdownx.details              
+  - pymdownx.emoji:                
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:             
+      custom_checkbox: true       
+  - footnotes                     
   
-  - pymdownx.tasklist:             # 任务清单
-      custom_checkbox: true       # 自定义复选框样式
+  # ========== 新增：排版与增强工具 ==========
+  - meta                          # 允许在文章头部添加 YAML 元数据
+  - attr_list                     # 允许自定义图片大小，例如：![图](img.png){width="300"}
+  - md_in_html                    # 允许在 HTML 标签内使用 Markdown
   
-  - footnotes                     # 脚注
-  
-  #- attr_list                     # 属性列表（给元素加样式）
-  # ========== 新增：公式渲染扩展（关键！） ==========
+  # ========== 极简公式渲染配置 ==========
   - pymdownx.arithmatex:
-      generic: true  # 启用通用模式
-      # 新增：指定 Arithmatex 传递给 MathJax 的分隔符（和 MathJax 配置一致）
-      inline_syntax:
-        - "\\["   # 行内左分隔符
-        - "\\]"   # 行内右分隔符
-        - "\\$"   # 兼容 $ 行内
-      block_syntax:
-        - "\\[\\[" # 块级左分隔符
-        - "\\]\\]" # 块级右分隔符
-        - "\\$\\$" # 兼容 $$ 块级
+      generic: true               # 仅保留通用模式，具体解析交由 mathjax-config.js

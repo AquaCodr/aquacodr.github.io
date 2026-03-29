@@ -1,13 +1,26 @@
-# MkDocs 构建生成的静态文件目录（由 GitHub Actions 自动构建，本地无需提交）
-#site/
+# =========================
+# Obsidian 相关配置忽略
+# =========================
+# 忽略工作区状态（这些文件记录了你打开了哪些标签页、面板位置，每次点击都会变）
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
 
-# Python 虚拟环境（若使用）
-venv/
-env/
+# 忽略 Obsidian 的本地回收站
+.trash/
 
-# 操作系统冗余文件
+# =========================
+# MkDocs 相关文件忽略
+# =========================
+# 忽略本地预览和编译时生成的静态网页文件夹（由于我们用 gh-deploy 推送，无需将本地生成的站点文件传到 main 分支）
+site/
+
+# =========================
+# 系统及环境缓存忽略
+# =========================
+# 忽略 Mac 系统的缓存文件
 .DS_Store
-Thumbs.db
 
-# IDE 配置文件（VS Code 等）
-.vscode/
+# 忽略 Python 缓存
+__pycache__/
+*.pyc

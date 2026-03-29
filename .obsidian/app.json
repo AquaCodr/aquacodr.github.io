@@ -1,0 +1,12 @@
+{
+  "newFileLocation": "folder",
+  "newFileFolderPath": "docs",
+  "attachmentFolderPath": "docs/assets",
+  "newLinkFormat": "relative",
+  "userIgnoreFilters": [
+    "site/",
+    "/[aA][tT][tT][aA][cC][hH][mM][eE][nN][tT][sS]/",
+    "/[sS][iI][tT][eE]/"
+  ],
+  "alwaysUpdateLinks": true
+}
