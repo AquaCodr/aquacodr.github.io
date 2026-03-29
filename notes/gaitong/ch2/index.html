@@ -1414,9 +1414,9 @@
 </ul>
 <h3 id="3"><strong>3. 离散型随机变量</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>描述工具：分布律（列）</strong>
-    <code>P{X = x_k} = p_k, k=1,2,...</code>
-    <strong>性质</strong>：<code>p_k ≥ 0</code>，且 <code>∑ p_k = 1</code>。</li>
+<li><strong>描述工具：分布律（列）</strong><br />
+<code>P{X = x_k} = p_k, k=1,2,...</code><br />
+<strong>性质</strong>：<code>p_k ≥ 0</code>，且 <code>∑ p_k = 1</code>。</li>
 <li><strong>分布函数</strong>：<code>F(x) = P{X ≤ x} = ∑_{x_k ≤ x} p_k</code>。是一个<strong>右连续的阶梯函数</strong>。</li>
 </ul>
 <h4 id="4"><strong>4. 连续型随机变量</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h4>
@@ -1524,16 +1524,16 @@
 <p><strong>连续型（重点和难点）</strong>：</p>
 <ol>
 <li><strong>公式法（仅当 <code>g</code> 严格单调）</strong>：<ul>
-<li>若 <code>y=g(x)</code> 单调可导，其反函数为 <code>x=h(y)</code>， 则 <code>Y</code> 的概率密度为：
- <code>f_Y(y) = f_X(h(y)) * |h'(y)|</code>， 其中 <code>y</code> 在 <code>g</code> 的值域内。</li>
+<li>若 <code>y=g(x)</code> 单调可导，其反函数为 <code>x=h(y)</code>， 则 <code>Y</code> 的概率密度为：<br />
+<code>f_Y(y) = f_X(h(y)) * |h'(y)|</code>， 其中 <code>y</code> 在 <code>g</code> 的值域内。</li>
 <li><strong>关键</strong>：一定要记得乘上<strong>导数绝对值</strong>，并确定 <code>y</code> 的新定义域。</li>
 </ul>
 </li>
 <li><strong>万能通法：分布函数法</strong>（强烈建议掌握）：<ul>
-<li><strong>步骤</strong>：
-    ① 写出 <code>F_Y(y) = P{Y ≤ y} = P{g(X) ≤ y}</code>。
-    ② 将 <code>{g(X) ≤ y}</code> 这个事件转化为 <code>X</code> 在某个区间 <code>I</code> 内的事件（可能需要讨论 <code>y</code> 的范围）。
-    ③ 利用 <code>X</code> 的分布（积分 <code>f_X(x)</code> 或计算 <code>F_X(x)</code>）求出这个概率，得到 <code>F_Y(y)</code>。
+<li><strong>步骤</strong>：<br />
+    ① 写出 <code>F_Y(y) = P{Y ≤ y} = P{g(X) ≤ y}</code>。<br />
+    ② 将 <code>{g(X) ≤ y}</code> 这个事件转化为 <code>X</code> 在某个区间 <code>I</code> 内的事件（可能需要讨论 <code>y</code> 的范围）。<br />
+    ③ 利用 <code>X</code> 的分布（积分 <code>f_X(x)</code> 或计算 <code>F_X(x)</code>）求出这个概率，得到 <code>F_Y(y)</code>。<br />
     ④ 对 <code>F_Y(y)</code> 求导，得到概率密度 <code>f_Y(y)</code>。</li>
 <li><strong>优点</strong>：普适，不易出错，尤其适合 <code>g</code> 非单调（如 <code>Y=X²</code>）、分段等情况。</li>
 </ul>

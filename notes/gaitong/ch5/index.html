@@ -1495,13 +1495,13 @@
 <h2 id="_3"><strong>二、 核心知识点精讲与易错点</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="1-chebyshevs-inequality"><strong>1. 切比雪夫不等式（Chebyshev’s Inequality）</strong><a class="headerlink" href="#1-chebyshevs-inequality" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>内容</strong>：对任意随机变量 <code>X</code>（要求方差存在），对任意 <code>ε &gt; 0</code>，有
-    [
-    P{ |X - E(X)| \ge \varepsilon } \le \frac{D(X)}{\varepsilon^2}
-    ]
-    等价形式：
-    [
-    P{ |X - E(X)| &lt; \varepsilon } \ge 1 - \frac{D(X)}{\varepsilon^2}
+<li><strong>内容</strong>：对任意随机变量 <code>X</code>（要求方差存在），对任意 <code>ε &gt; 0</code>，有<br />
+    [<br />
+    P{ |X - E(X)| \ge \varepsilon } \le \frac{D(X)}{\varepsilon^2}<br />
+    ]<br />
+    等价形式：<br />
+    [<br />
+    P{ |X - E(X)| &lt; \varepsilon } \ge 1 - \frac{D(X)}{\varepsilon^2}<br />
     ]</li>
 <li><strong>含义</strong>：给出了随机变量偏离其均值的<strong>概率上界</strong>。方差 <code>D(X)</code> 越小，偏离的可能性越小。</li>
 <li><strong>用途</strong>：<ol>
@@ -1515,26 +1515,26 @@
 <p><strong>核心</strong>：大量重复试验中，<strong>频率</strong>稳定于<strong>概率</strong>，<strong>样本均值</strong>稳定于<strong>总体均值</strong>。</p>
 <ul>
 <li>
-<p><strong>伯努利大数定律</strong>：
-    设 <code>n_A</code> 是 <code>n</code> 重伯努利试验中事件 <code>A</code> 发生的次数，<code>p</code> 是每次试验中 <code>A</code> 发生的概率，则对任意 <code>ε &gt; 0</code>，
-    [
-    \lim_{n \to \infty} P\left{ \left| \frac{n_A}{n} - p \right| &lt; \varepsilon \right} = 1
-    ]
-    <strong>解释</strong>：频率 <code>n_A/n</code> 依概率收敛于概率 <code>p</code>。</p>
+<p><strong>伯努利大数定律</strong>：<br />
+    设 <code>n_A</code> 是 <code>n</code> 重伯努利试验中事件 <code>A</code> 发生的次数，<code>p</code> 是每次试验中 <code>A</code> 发生的概率，则对任意 <code>ε &gt; 0</code>，<br />
+    [<br />
+    \lim_{n \to \infty} P\left{ \left| \frac{n_A}{n} - p \right| &lt; \varepsilon \right} = 1<br />
+    ]<br />
+<strong>解释</strong>：频率 <code>n_A/n</code> 依概率收敛于概率 <code>p</code>。</p>
 </li>
 <li>
-<p><strong>辛钦大数定律（常用）</strong>：
-    设 <code>X1, X2, ..., Xn, ...</code> 是<strong>独立同分布</strong>的随机变量序列，且 <code>E(X_i) = μ</code> 存在，则对任意 <code>ε &gt; 0</code>，
-    [
-    \lim_{n \to \infty} P\left{ \left| \frac{1}{n} \sum_{i=1}^{n} X_i - \mu \right| &lt; \varepsilon \right} = 1
-    ]
-    记 <code>X̄_n = (1/n) ΣX_i</code>，则 <code>X̄_n</code> 依概率收敛于 <code>μ</code>。
-    <strong>解释</strong>：只要独立同分布且期望存在，样本均值就是总体均值的相合估计。</p>
+<p><strong>辛钦大数定律（常用）</strong>：<br />
+    设 <code>X1, X2, ..., Xn, ...</code> 是<strong>独立同分布</strong>的随机变量序列，且 <code>E(X_i) = μ</code> 存在，则对任意 <code>ε &gt; 0</code>，<br />
+    [<br />
+    \lim_{n \to \infty} P\left{ \left| \frac{1}{n} \sum_{i=1}^{n} X_i - \mu \right| &lt; \varepsilon \right} = 1<br />
+    ]<br />
+    记 <code>X̄_n = (1/n) ΣX_i</code>，则 <code>X̄_n</code> 依概率收敛于 <code>μ</code>。<br />
+<strong>解释</strong>：只要独立同分布且期望存在，样本均值就是总体均值的相合估计。</p>
 </li>
 <li>
-<p><strong>切比雪夫大数定律</strong>：
-    要求 <code>X1, X2, ...</code> 两两不相关（或独立），方差存在且有共同上界，则结论同辛钦大数定律。
-    <strong>区别</strong>：辛钦要求同分布，切比雪夫不要求同分布但要求方差有界。</p>
+<p><strong>切比雪夫大数定律</strong>：<br />
+    要求 <code>X1, X2, ...</code> 两两不相关（或独立），方差存在且有共同上界，则结论同辛钦大数定律。<br />
+<strong>区别</strong>：辛钦要求同分布，切比雪夫不要求同分布但要求方差有界。</p>
 </li>
 </ul>
 <p><strong>大数定律的意义</strong>：奠定了用样本估计总体的理论基础（矩估计、频率估计概率）。</p>
@@ -1542,32 +1542,32 @@
 <p><strong>核心</strong>：无论总体分布是什么，只要样本量足够大，<strong>样本均值的分布</strong>就近似服从正态分布。</p>
 <ul>
 <li>
-<p><strong>独立同分布情形（林德伯格-莱维 CLT）</strong>：
-    设 <code>X1, X2, ..., Xn, ...</code> 是独立同分布的随机变量序列，且 <code>E(X_i)=μ</code>， <code>D(X_i)=σ² &gt; 0</code>，则对任意实数 <code>x</code>，
-    [
-    \lim_{n \to \infty} P\left{ \frac{\sum_{i=1}^{n} X_i - n\mu}{\sqrt{n} \sigma} \le x \right} = \Phi(x)
-    ]
+<p><strong>独立同分布情形（林德伯格-莱维 CLT）</strong>：<br />
+    设 <code>X1, X2, ..., Xn, ...</code> 是独立同分布的随机变量序列，且 <code>E(X_i)=μ</code>， <code>D(X_i)=σ² &gt; 0</code>，则对任意实数 <code>x</code>，<br />
+    [<br />
+    \lim_{n \to \infty} P\left{ \frac{\sum_{i=1}^{n} X_i - n\mu}{\sqrt{n} \sigma} \le x \right} = \Phi(x)<br />
+    ]<br />
     其中 <code>Φ(x)</code> 是标准正态分布函数。</p>
-<p><strong>等价常用形式</strong>：
-记 <code>X̄_n = (1/n) ΣX_i</code>，则当 <code>n</code> 很大时，
-[
-\frac{\overline{X}<em i="1">n - \mu}{\sigma / \sqrt{n}} \stackrel{\text{近似}}{\sim} N(0, 1)
-]
-或者说：
-[
-\overline{X}_n \stackrel{\text{近似}}{\sim} N\left( \mu, \frac{\sigma^2}{n} \right)
-]
-[
-\sum</em> N\left( n\mu, n\sigma^2 \right)
-]}^{n} X_i \stackrel{\text{近似}}{\sim</p>
+<p><strong>等价常用形式</strong>：<br />
+记 <code>X̄_n = (1/n) ΣX_i</code>，则当 <code>n</code> 很大时，<br />
+[<br />
+\frac{\overline{X}<em i="1">n - \mu}{\sigma / \sqrt{n}} \stackrel{\text{近似}}{\sim} N(0, 1)<br />
+]<br />
+或者说：<br />
+[<br />
+\overline{X}_n \stackrel{\text{近似}}{\sim} N\left( \mu, \frac{\sigma^2}{n} \right)<br />
+]<br />
+[<br />
+\sum</em> N\left( n\mu, n\sigma^2 \right)}^{n} X_i \stackrel{\text{近似}}{\sim<br />
+]</p>
 </li>
 <li>
-<p><strong>德莫弗-拉普拉斯定理（二项分布的正态近似）</strong>：
-    设 <code>Y_n ~ B(n, p)</code>，则对任意 <code>a &lt; b</code>，
-    [
-    \lim_{n \to \infty} P\left{ a \le \frac{Y_n - np}{\sqrt{np(1-p)}} \le b \right} = \Phi(b) - \Phi(a)
-    ]
-    <strong>解释</strong>：二项分布当 <code>n</code> 很大时，可用正态分布 <code>N(np, np(1-p))</code> 近似。这是上述 CLT 的特例，因为 <code>Y_n</code> 可看作 <code>n</code> 个独立 <code>B(1, p)</code> 变量之和。</p>
+<p><strong>德莫弗-拉普拉斯定理（二项分布的正态近似）</strong>：<br />
+    设 <code>Y_n ~ B(n, p)</code>，则对任意 <code>a &lt; b</code>，<br />
+    [<br />
+    \lim_{n \to \infty} P\left{ a \le \frac{Y_n - np}{\sqrt{np(1-p)}} \le b \right} = \Phi(b) - \Phi(a)<br />
+    ]<br />
+<strong>解释</strong>：二项分布当 <code>n</code> 很大时，可用正态分布 <code>N(np, np(1-p))</code> 近似。这是上述 CLT 的特例，因为 <code>Y_n</code> 可看作 <code>n</code> 个独立 <code>B(1, p)</code> 变量之和。</p>
 </li>
 </ul>
 <hr />
@@ -1611,10 +1611,10 @@
 <p><strong>易错点</strong>：</p>
 <ol>
 <li><strong>CLT 的应用条件</strong>：必须是<strong>独立同分布</strong>（或满足更一般的 Lyapunov/Lindeberg 条件），且方差有限。对于明显不对称或重尾的分布，需要更大的 <code>n</code> 才能近似得好。</li>
-<li><strong>标准化公式</strong>：一定要用对标准化形式：
-    [
-    Z = \frac{\overline{X} - \mu}{\sigma / \sqrt{n}}
-    ]
+<li><strong>标准化公式</strong>：一定要用对标准化形式：<br />
+    [<br />
+    Z = \frac{\overline{X} - \mu}{\sigma / \sqrt{n}}<br />
+    ]<br />
     分母是 <code>σ/√n</code>，不是 <code>σ</code> 或 <code>σ/√(n-1)</code>。</li>
 <li><strong>与切比雪夫不等式的区别</strong>：切比雪夫给出的是概率界，CLT 给出的是近似分布。</li>
 <li><strong>何时用哪种近似</strong>：<ul>
@@ -1653,29 +1653,29 @@
 <li><strong>标准解题步骤</strong>：<ol>
 <li><strong>确认条件</strong>：<code>X_i</code> 独立同分布，<code>n</code> 较大（通常 <code>n≥30</code>，但对于二项分布若 <code>np&gt;5</code> 且 <code>n(1-p)&gt;5</code> 也可用）。</li>
 <li><strong>计算总体参数</strong>：<code>μ = E(X_i)</code>， <code>σ² = D(X_i)</code>。</li>
-<li><strong>写出近似分布</strong>：
-    [
-    \sum_{i=1}^{n} X_i \stackrel{\text{近似}}{\sim} N(n\mu, n\sigma^2)
-    ]
-    或
-    [
-    \overline{X} \stackrel{\text{近似}}{\sim} N\left( \mu, \frac{\sigma^2}{n} \right)
+<li><strong>写出近似分布</strong>：<br />
+    [<br />
+    \sum_{i=1}^{n} X_i \stackrel{\text{近似}}{\sim} N(n\mu, n\sigma^2)<br />
+    ]<br />
+    或<br />
+    [<br />
+    \overline{X} \stackrel{\text{近似}}{\sim} N\left( \mu, \frac{\sigma^2}{n} \right)<br />
     ]</li>
-<li><strong>标准化</strong>（如果要求概率）：
-    [
-    P\left{ \sum X_i \le a \right} = P\left{ \frac{\sum X_i - n\mu}{\sqrt{n}\sigma} \le \frac{a - n\mu}{\sqrt{n}\sigma} \right} \approx \Phi\left( \frac{a - n\mu}{\sqrt{n}\sigma} \right)
+<li><strong>标准化</strong>（如果要求概率）：<br />
+    [<br />
+    P\left{ \sum X_i \le a \right} = P\left{ \frac{\sum X_i - n\mu}{\sqrt{n}\sigma} \le \frac{a - n\mu}{\sqrt{n}\sigma} \right} \approx \Phi\left( \frac{a - n\mu}{\sqrt{n}\sigma} \right)<br />
     ]</li>
 <li><strong>查表</strong>计算 <code>Φ(z)</code> 值，注意连续性校正（离散型时）。</li>
 </ol>
 </li>
 </ul>
-<p><strong>连续性校正（对离散型，特别是二项分布）</strong>：
-当用正态分布近似离散分布（如二项）时，为减小误差，需做连续性校正：
-[
-P(Y \le k) \approx \Phi\left( \frac{k + 0.5 - np}{\sqrt{np(1-p)}} \right)
-]
-[
-P(Y \ge k) \approx 1 - \Phi\left( \frac{k - 0.5 - np}{\sqrt{np(1-p)}} \right)
+<p><strong>连续性校正（对离散型，特别是二项分布）</strong>：<br />
+当用正态分布近似离散分布（如二项）时，为减小误差，需做连续性校正：<br />
+[<br />
+P(Y \le k) \approx \Phi\left( \frac{k + 0.5 - np}{\sqrt{np(1-p)}} \right)<br />
+]<br />
+[<br />
+P(Y \ge k) \approx 1 - \Phi\left( \frac{k - 0.5 - np}{\sqrt{np(1-p)}} \right)<br />
 ]</p>
 <hr />
 <h2 id="_6"><strong>五、终极查漏清单</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
@@ -1694,7 +1694,7 @@ P(Y \ge k) \approx 1 - \Phi\left( \frac{k - 0.5 - np}{\sqrt{np(1-p)}} \right)
 </ul>
 </li>
 </ol>
-<p><strong>一个重要练习</strong>：
+<p><strong>一个重要练习</strong>：<br />
 某生产线生产零件的长度服从均值为 <code>10cm</code>，标准差为 <code>0.2cm</code> 的分布。每天抽检 <code>100</code> 个零件。</p>
 <ol>
 <li>求这 <code>100</code> 个零件平均长度的近似分布。</li>

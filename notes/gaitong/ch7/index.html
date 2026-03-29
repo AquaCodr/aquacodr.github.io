@@ -1463,7 +1463,7 @@
 <hr />
 <h2 id="_2"><strong>一、 核心逻辑与知识地图</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>核心思想</strong>：构造样本的函数（统计量）作为未知参数的估计，并评价其好坏。</p>
-<p><strong>逻辑主线</strong>：
+<p><strong>逻辑主线</strong>：<br />
 <strong>待估参数 θ</strong> → <strong>构造估计量的两种主要方法</strong>（矩估计、最大似然估计）→ <strong>评价估计量的四个标准</strong>（无偏性、有效性、一致性、均方误差）</p>
 <p><strong>关键</strong>：区分<strong>估计量</strong>（随机变量，<code>θ̂ = θ̂(X₁,…,Xₙ)</code>）和<strong>估计值</strong>（具体数值，<code>θ̂(x₁,…,xₙ)</code>）。</p>
 <hr />
@@ -1504,7 +1504,7 @@
 <li><strong>核心概念</strong>：<ul>
 <li><strong>似然函数</strong>：<ul>
 <li>离散型：<code>L(θ) = L(θ; x₁,…,xₙ) = ∏ P(X_i = x_i; θ)</code></li>
-<li>连续型：<code>L(θ) = ∏ f(x_i; θ)</code>
+<li>连续型：<code>L(θ) = ∏ f(x_i; θ)</code><br />
     （<code>L(θ)</code> 是参数 <code>θ</code> 的函数，样本观测值固定）</li>
 </ul>
 </li>
@@ -1570,10 +1570,10 @@
 <p><strong>均方误差准则（MSE，综合权衡）</strong></p>
 <ul>
 <li>定义：<code>MSE(θ̂) = E[(θ̂ - θ)²]</code>。</li>
-<li><strong>分解公式（非常重要）</strong>：
-    [
-    MSE(\hat{\theta}) = D(\hat{\theta}) + [Bias(\hat{\theta})]^2
-    ]
+<li><strong>分解公式（非常重要）</strong>：<br />
+    [<br />
+    MSE(\hat{\theta}) = D(\hat{\theta}) + [Bias(\hat{\theta})]^2<br />
+    ]<br />
     （方差 + 偏差的平方）</li>
 <li><strong>意义</strong>：综合衡量估计的精度。在比较<strong>有偏估计和无偏估计</strong>时，常用 MSE 标准（因为可能用较小的偏差换取方差的大幅降低，从而 MSE 更小）。</li>
 </ul>
@@ -1627,7 +1627,7 @@
 <li><strong>公式</strong>：MSE 的分解公式是什么？如果估计量是无偏的，MSE 等于什么？</li>
 <li><strong>辨析</strong>：“一个好的估计量应该方差尽可能小”和“一个好的估计量应该无偏”，这两个要求哪个更重要？（取决于问题，通常希望 MSE 小，可以牺牲无偏性换取更小的方差）</li>
 </ol>
-<p><strong>重要练习</strong>：
+<p><strong>重要练习</strong>：<br />
 设总体 <code>X</code> 服从参数为 <code>λ</code> 的泊松分布，<code>X₁,…,Xₙ</code> 为样本。</p>
 <ol>
 <li>用矩估计法和最大似然估计法分别求 <code>λ</code> 的估计量。</li>

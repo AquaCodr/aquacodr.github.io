@@ -1429,7 +1429,7 @@
 <hr />
 <h2 id="_2">一、 核心逻辑与知识地图<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>核心思想：</strong> 研究<strong>两个或多个</strong>随机变量作为一个整体的统计规律，以及它们之间的相互关系。</p>
-<p><strong>逻辑主线：</strong>
+<p><strong>逻辑主线：</strong><br />
 <strong>二维随机变量(X, Y)</strong> → <strong>联合分布函数F(x, y)</strong> （核心纽带）→ <strong>具体类型</strong></p>
 <ul>
 <li><strong>离散型</strong>：用<strong>联合分布律</strong>描述</li>
@@ -1442,8 +1442,8 @@
 <h2 id="_3"><strong>二、 核心知识点精讲与易错点</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="1"><strong>1. 二维随机变量与联合分布函数</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>联合分布函数（统一描述工具）</strong>：
-    <code>F(x, y) = P{X ≤ x, Y ≤ y}</code>， 表示随机点<code>(X, Y)</code>落在以<code>(x, y)</code>为顶点的<strong>无穷矩形区域</strong>内的概率。</li>
+<li><strong>联合分布函数（统一描述工具）</strong>：<br />
+<code>F(x, y) = P{X ≤ x, Y ≤ y}</code>， 表示随机点<code>(X, Y)</code>落在以<code>(x, y)</code>为顶点的<strong>无穷矩形区域</strong>内的概率。</li>
 <li><strong>四大性质（判定函数F(x,y)是否为联合分布函数的充要条件）</strong>：<ol>
 <li><strong>单调性</strong>：关于每个变量单调不减。</li>
 <li><strong>规范性</strong>：<ul>
@@ -1453,21 +1453,21 @@
 </ul>
 </li>
 <li><strong>右连续性</strong>：关于每个变量都是右连续的。</li>
-<li><strong>非负性</strong>：对任意<code>a&lt;b, c&lt;d</code>，有
-    <code>P{a&lt;X≤b, c&lt;Y≤d} = F(b,d) - F(a,d) - F(b,c) + F(a,c) ≥ 0</code>
-    <strong>这是二维独有的重要性质，体现了概率的非负性。</strong></li>
+<li><strong>非负性</strong>：对任意<code>a&lt;b, c&lt;d</code>，有<br />
+<code>P{a&lt;X≤b, c&lt;Y≤d} = F(b,d) - F(a,d) - F(b,c) + F(a,c) ≥ 0</code><br />
+<strong>这是二维独有的重要性质，体现了概率的非负性。</strong></li>
 </ol>
 </li>
 </ul>
 <h3 id="2"><strong>2. 二维离散型随机变量</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>描述工具：联合分布律</strong>：
-    <code>P{X = x_i, Y = y_j} = p_{ij}</code>， <code>i, j = 1, 2, ...</code>
-    <strong>性质</strong>：<code>p_{ij} ≥ 0</code>，且 <code>∑_i ∑_j p_{ij} = 1</code>。</li>
+<li><strong>描述工具：联合分布律</strong>：<br />
+<code>P{X = x_i, Y = y_j} = p_{ij}</code>， <code>i, j = 1, 2, ...</code><br />
+<strong>性质</strong>：<code>p_{ij} ≥ 0</code>，且 <code>∑_i ∑_j p_{ij} = 1</code>。</li>
 <li><strong>边缘分布律</strong>：<ul>
 <li><code>P{X = x_i} = p_{i·} = ∑_j p_{ij}</code> （对j求和，即表格的<strong>行和</strong>）</li>
-<li><code>P{Y = y_j} = p_{·j} = ∑_i p_{ij}</code> （对i求和，即表格的<strong>列和</strong>）
-    <strong>易错点</strong>：边缘分布是一维分布，需满足一维分布律的性质。</li>
+<li><code>P{Y = y_j} = p_{·j} = ∑_i p_{ij}</code> （对i求和，即表格的<strong>列和</strong>）<br />
+<strong>易错点</strong>：边缘分布是一维分布，需满足一维分布律的性质。</li>
 </ul>
 </li>
 <li><strong>条件分布律</strong>（在已知一个变量取值条件下，另一个变量的分布）：<ul>
@@ -1483,22 +1483,22 @@
 <li><strong>性质</strong>：<ol>
 <li><code>f(x, y) ≥ 0</code></li>
 <li><code>∫_{-∞}^{+∞} ∫_{-∞}^{+∞} f(x, y) dx dy = 1</code> （归一性）</li>
-<li><strong>几何意义</strong>：概率是<strong>曲面下的体积</strong>。
-    <code>P{(X, Y) ∈ D} = ∬_{D} f(x, y) dx dy</code></li>
+<li><strong>几何意义</strong>：概率是<strong>曲面下的体积</strong>。<br />
+<code>P{(X, Y) ∈ D} = ∬_{D} f(x, y) dx dy</code></li>
 </ol>
 </li>
 </ul>
 </li>
 <li><strong>边缘概率密度</strong>：<ul>
 <li><code>f_X(x) = ∫_{-∞}^{+∞} f(x, y) dy</code></li>
-<li><code>f_Y(y) = ∫_{-∞}^{+∞} f(x, y) dx</code>
-    <strong>几何意义</strong>：联合密度曲面在<code>x</code>（或<code>y</code>）方向的“投影”。</li>
+<li><code>f_Y(y) = ∫_{-∞}^{+∞} f(x, y) dx</code><br />
+<strong>几何意义</strong>：联合密度曲面在<code>x</code>（或<code>y</code>）方向的“投影”。</li>
 </ul>
 </li>
 <li><strong>条件概率密度</strong>（核心且易错）：<ul>
 <li><code>f_{X|Y}(x | y) = f(x, y) / f_Y(y)</code>， 要求 <code>f_Y(y) &gt; 0</code></li>
-<li><code>f_{Y|X}(y | x) = f(x, y) / f_X(x)</code>， 要求 <code>f_X(x) &gt; 0</code>
-    <strong>重要理解</strong>：对于固定的<code>y</code>，<code>f_{X|Y}(x | y)</code>是<strong>关于<code>x</code>的一元概率密度函数</strong>，满足归一性：<code>∫ f_{X|Y}(x|y) dx = 1</code>。</li>
+<li><code>f_{Y|X}(y | x) = f(x, y) / f_X(x)</code>， 要求 <code>f_X(x) &gt; 0</code><br />
+<strong>重要理解</strong>：对于固定的<code>y</code>，<code>f_{X|Y}(x | y)</code>是<strong>关于<code>x</code>的一元概率密度函数</strong>，满足归一性：<code>∫ f_{X|Y}(x|y) dx = 1</code>。</li>
 </ul>
 </li>
 <li><strong>常见二维连续分布</strong>：<ul>
@@ -1529,9 +1529,9 @@
 <li>
 <p><strong>分布函数法（万能通法，尤其适合非单调、分段、区域复杂情况）</strong>：</p>
 <ul>
-<li><strong>步骤</strong>：
-    ① <code>F_Z(z) = P{Z ≤ z} = P{g(X, Y) ≤ z} = P{(X, Y) ∈ D_z}</code>，其中 <code>D_z = {(x, y) | g(x, y) ≤ z}</code>。
-    ② 计算概率 <code>∬_{D_z} f(x, y) dx dy</code>。
+<li><strong>步骤</strong>：<br />
+    ① <code>F_Z(z) = P{Z ≤ z} = P{g(X, Y) ≤ z} = P{(X, Y) ∈ D_z}</code>，其中 <code>D_z = {(x, y) | g(x, y) ≤ z}</code>。<br />
+    ② 计算概率 <code>∬_{D_z} f(x, y) dx dy</code>。<br />
     ③ 对 <code>z</code> 求导得到密度 <code>f_Z(z)</code>。</li>
 <li><strong>关键</strong>：正确画出积分区域 <code>D_z</code> 并确定积分上下限。</li>
 </ul>
@@ -1604,7 +1604,7 @@
 <li><strong>应用</strong>：如何用分布函数法求 <code>Z=X/Y</code> 的密度？（提示：<code>{X/Y ≤ z}</code> 的区域需分 <code>y&gt;0</code> 和 <code>y&lt;0</code> 讨论）</li>
 <li><strong>联系</strong>：二维正态分布中，参数 <code>ρ</code> 的几何意义是什么？<code>ρ=0</code> 意味着什么？</li>
 </ol>
-<p><strong>一个重要的综合练习</strong>：
+<p><strong>一个重要的综合练习</strong>：<br />
 设 <code>(X,Y)</code> 在由 <code>y=x</code>, <code>y=0</code>, <code>x=1</code> 围成的三角形区域上服从均匀分布。</p>
 <ol>
 <li>求联合密度 <code>f(x,y)</code> 和边缘密度 <code>f_X(x)</code>。</li>

@@ -1431,7 +1431,7 @@
 </div>
 <hr />
 <h2 id="_2"><strong>一、 知识地图与逻辑关系</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>主线：</strong>
+<p><strong>主线：</strong><br />
 <strong>随机试验</strong> → <strong>样本空间</strong> → <strong>随机事件</strong> → <strong>事件的关系与运算</strong> → <strong>概率的定义与性质</strong> → <strong>条件概率</strong> → <strong>两大公式（乘法、全概率、贝叶斯）</strong> → <strong>独立性</strong></p>
 <p><strong>关键逻辑：</strong></p>
 <ol>
@@ -1480,8 +1480,8 @@
 <li><code>P(Ā) = 1 - P(A)</code></li>
 <li><strong>减法公式</strong>：<code>P(A-B) = P(A) - P(AB)</code> （特别地，若 B⊂A，则 <code>P(A-B)=P(A)-P(B)</code>）</li>
 <li><strong>核心！加法公式</strong>：<code>P(A∪B) = P(A) + P(B) - P(AB)</code><ul>
-<li><strong>易错/常考</strong>：求三个事件的并的概率公式：
-    <code>P(A∪B∪C) = P(A)+P(B)+P(C) - P(AB)-P(AC)-P(BC) + P(ABC)</code></li>
+<li><strong>易错/常考</strong>：求三个事件的并的概率公式：<br />
+<code>P(A∪B∪C) = P(A)+P(B)+P(C) - P(AB)-P(AC)-P(BC) + P(ABC)</code></li>
 </ul>
 </li>
 <li><strong>单调性</strong>：若 A⊂B，则 <code>P(A) ≤ P(B)</code></li>
@@ -1490,8 +1490,8 @@
 </ul>
 <h3 id="3-key-concept"><strong>3. 条件概率（Key Concept！）</strong><a class="headerlink" href="#3-key-concept" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>定义</strong>：在事件B已发生的条件下，事件A发生的概率。
-    <code>P(A|B) = P(AB) / P(B)</code>， 要求 <code>P(B) &gt; 0</code>。</li>
+<li><strong>定义</strong>：在事件B已发生的条件下，事件A发生的概率。<br />
+<code>P(A|B) = P(AB) / P(B)</code>， 要求 <code>P(B) &gt; 0</code>。</li>
 <li><strong>本质</strong>：<strong>样本空间的缩小</strong>。新的样本空间就是B。</li>
 <li><strong>易错点</strong>：<ol>
 <li><code>P(A|B)</code> 与 <code>P(B|A)</code> 完全不同！贝叶斯公式就是连接它们的桥梁。</li>
@@ -1501,8 +1501,8 @@
 </ul>
 <h3 id="4"><strong>4. 三大公式</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>乘法公式（由条件概率定义直接推出）</strong>：
-    <code>P(AB) = P(A)P(B|A) = P(B)P(A|B)</code><ul>
+<li><strong>乘法公式（由条件概率定义直接推出）</strong>：<br />
+<code>P(AB) = P(A)P(B|A) = P(B)P(A|B)</code><ul>
 <li><strong>推广</strong>：<code>P(A1A2...An) = P(A1)P(A2|A1)P(A3|A1A2)...P(An|A1A2...An-1)</code></li>
 <li><strong>应用场景</strong>：涉及“分步发生”、“同时发生”且非独立的事件。</li>
 </ul>

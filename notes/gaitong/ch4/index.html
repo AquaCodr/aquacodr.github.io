@@ -1451,7 +1451,7 @@
 <hr />
 <h2 id="_2"><strong>一、 核心逻辑与知识地图</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>核心思想：</strong> 用确定的数字来概括随机变量分布的主要特征。</p>
-<p><strong>逻辑主线：</strong>
+<p><strong>逻辑主线：</strong><br />
 <strong>位置特征</strong>（数学期望）→ <strong>离散程度</strong>（方差）→ <strong>相互关系</strong>（协方差与相关系数）</p>
 <p>这些特征分为两类：</p>
 <ol>
@@ -1483,11 +1483,11 @@
 </ul>
 <h3 id="2-variance"><strong>2. 方差（Variance）</strong><a class="headerlink" href="#2-variance" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>定义</strong>：衡量随机变量取值相对于其均值的<strong>平均波动程度</strong>。
-    <code>D(X) = Var(X) = E[ (X - E(X))² ]</code></li>
-<li><strong>计算方差的核心公式（更常用）</strong>：
-    <code>D(X) = E(X²) - [E(X)]²</code>
-    <strong>推导</strong>：<code>D(X) = E(X² - 2X·E(X) + [E(X)]²) = E(X²) - 2E(X)E(X) + [E(X)]² = E(X²) - [E(X)]²</code></li>
+<li><strong>定义</strong>：衡量随机变量取值相对于其均值的<strong>平均波动程度</strong>。<br />
+<code>D(X) = Var(X) = E[ (X - E(X))² ]</code></li>
+<li><strong>计算方差的核心公式（更常用）</strong>：<br />
+<code>D(X) = E(X²) - [E(X)]²</code><br />
+<strong>推导</strong>：<code>D(X) = E(X² - 2X·E(X) + [E(X)]²) = E(X²) - 2E(X)E(X) + [E(X)]² = E(X²) - [E(X)]²</code></li>
 <li><strong>性质</strong>：<ol>
 <li><code>D(c) = 0</code>，c是常数。</li>
 <li><code>D(aX + b) = a² D(X)</code>。<strong>注意：加常数b不影响方差，乘系数a要平方</strong>。</li>
@@ -1506,10 +1506,10 @@
 </ul>
 <h3 id="3-covariance"><strong>3. 协方差（Covariance）</strong><a class="headerlink" href="#3-covariance" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>定义</strong>：衡量两个随机变量<strong>协同变化</strong>的程度。
-    <code>Cov(X, Y) = E[ (X - E(X)) (Y - E(Y)) ]</code></li>
-<li><strong>计算协方差的核心公式</strong>：
-    <code>Cov(X, Y) = E(XY) - E(X)E(Y)</code>
+<li><strong>定义</strong>：衡量两个随机变量<strong>协同变化</strong>的程度。<br />
+<code>Cov(X, Y) = E[ (X - E(X)) (Y - E(Y)) ]</code></li>
+<li><strong>计算协方差的核心公式</strong>：<br />
+<code>Cov(X, Y) = E(XY) - E(X)E(Y)</code><br />
     （这是最常用的计算公式，与方差公式 <code>D(X)=E(X²)-[E(X)]²</code> 类似）</li>
 <li><strong>性质</strong>：<ol>
 <li><code>Cov(X, Y) = Cov(Y, X)</code>。</li>
@@ -1519,14 +1519,14 @@
 <li>若 <code>X</code> 与 <code>Y</code> 独立，则 <code>Cov(X, Y) = 0</code>。<strong>反之不成立</strong>。</li>
 </ol>
 </li>
-<li><strong>与方差的关系</strong>：
-    <code>D(X ± Y) = D(X) + D(Y) ± 2Cov(X, Y)</code></li>
+<li><strong>与方差的关系</strong>：<br />
+<code>D(X ± Y) = D(X) + D(Y) ± 2Cov(X, Y)</code></li>
 </ul>
 <h3 id="4-correlation-coefficient"><strong>4. 相关系数（Correlation Coefficient）</strong><a class="headerlink" href="#4-correlation-coefficient" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>定义</strong>：将协方差标准化，消除量纲影响，纯粹反映线性相关程度。
-    [
-    \rho_{XY} = \frac{Cov(X, Y)}{\sqrt{D(X)} \sqrt{D(Y)}}
+<li><strong>定义</strong>：将协方差标准化，消除量纲影响，纯粹反映线性相关程度。<br />
+    [<br />
+    \rho_{XY} = \frac{Cov(X, Y)}{\sqrt{D(X)} \sqrt{D(Y)}}<br />
     ]</li>
 <li><strong>性质（核心）</strong>：<ol>
 <li><code>|ρ_{XY}| ≤ 1</code>。</li>
@@ -1554,18 +1554,18 @@
 <ol>
 <li><strong>方差计算公式</strong>：<code>D(X) = E(X²) - [E(X)]²</code></li>
 <li><strong>协方差计算公式</strong>：<code>Cov(X, Y) = E(XY) - E(X)E(Y)</code></li>
-<li><strong>随机变量和的方差</strong>：
-    [
-    D(X+Y) = D(X) + D(Y) + 2Cov(X, Y)
-    ]
-    [
-    D(X-Y) = D(X) + D(Y) - 2Cov(X, Y)
+<li><strong>随机变量和的方差</strong>：<br />
+    [<br />
+    D(X+Y) = D(X) + D(Y) + 2Cov(X, Y)<br />
+    ]<br />
+    [<br />
+    D(X-Y) = D(X) + D(Y) - 2Cov(X, Y)<br />
     ]</li>
-<li><strong>切比雪夫不等式（了解）</strong>：
-    对任意 <code>ε &gt; 0</code>，有
-    [
-    P{ |X - E(X)| ≥ ε } ≤ \frac{D(X)}{ε²}
-    ]
+<li><strong>切比雪夫不等式（了解）</strong>：<br />
+    对任意 <code>ε &gt; 0</code>，有<br />
+    [<br />
+    P{ |X - E(X)| ≥ ε } ≤ \frac{D(X)}{ε²}<br />
+    ]<br />
     它给出了随机变量偏离均值程度的概率上界。</li>
 </ol>
 <hr />
@@ -1646,8 +1646,8 @@
 </ul>
 </li>
 <li>
-<p><strong>综合题</strong>：结合具体分布，求期望、方差、协方差、相关系数，并讨论独立性。
-    <strong>经典套路</strong>：</p>
+<p><strong>综合题</strong>：结合具体分布，求期望、方差、协方差、相关系数，并讨论独立性。<br />
+<strong>经典套路</strong>：</p>
 <ol>
 <li>先求边缘密度 <code>f_X(x)</code>， <code>f_Y(y)</code>。</li>
 <li>求 <code>E(X)</code>， <code>E(Y)</code>， <code>E(X²)</code>， <code>E(Y²)</code>， <code>E(XY)</code>。</li>
@@ -1665,7 +1665,7 @@
 <li><strong>辨析</strong>：“独立”和“不相关”的区别与联系是什么？在什么条件下它们等价？</li>
 <li><strong>应用</strong>：对于二维均匀分布在一个圆形区域上，<code>X</code> 与 <code>Y</code> 是否独立？是否不相关？（通常不独立，但由于对称性，常常不相关 <code>ρ=0</code>）</li>
 </ol>
-<p><strong>一个重要练习</strong>：
+<p><strong>一个重要练习</strong>：<br />
 设 <code>(X, Y)</code> 的联合密度为 <code>f(x, y) = x + y</code>， <code>0 &lt; x &lt; 1, 0 &lt; y &lt; 1</code>。</p>
 <ol>
 <li>求 <code>E(X)</code>， <code>E(Y)</code>， <code>Cov(X, Y)</code>。</li>

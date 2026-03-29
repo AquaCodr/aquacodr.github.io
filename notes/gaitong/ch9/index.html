@@ -1595,7 +1595,7 @@
 <hr />
 <h2 id="_2"><strong>一、 核心逻辑与知识地图</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>核心思想：</strong> 利用小概率反证法，对总体参数或分布的某个假设做出拒绝或不拒绝的决策。</p>
-<p><strong>逻辑主线：</strong>
+<p><strong>逻辑主线：</strong><br />
 <strong>提出原假设与备择假设</strong> → <strong>构造检验统计量（在 H₀ 下分布已知）</strong> → <strong>确定拒绝域（显著性水平 α）</strong> → <strong>根据样本计算并决策</strong><br />
 <strong>或</strong>：<strong>计算 P 值</strong> → <strong>与 α 比较并决策</strong></p>
 <p><strong>两大框架：</strong></p>
@@ -1722,10 +1722,10 @@
 <h3 id="6"><strong>6. 非正态总体或大样本情形</strong><a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>均值检验（大样本）</strong>：由中心极限定理，用 <code>Z = (X̄ - μ₀)/(S/√n) ≈ N(0,1)</code>。</li>
-<li><strong>比例检验（0-1分布）</strong>：检验 <code>H₀: p = p₀</code>。大样本下，
-    [
-    Z = \frac{\hat{p} - p_0}{\sqrt{p_0(1-p_0)/n}} \stackrel{\text{近似}}{\sim} N(0,1)。
-    ]
+<li><strong>比例检验（0-1分布）</strong>：检验 <code>H₀: p = p₀</code>。大样本下，<br />
+    [<br />
+    Z = \frac{\hat{p} - p_0}{\sqrt{p_0(1-p_0)/n}} \stackrel{\text{近似}}{\sim} N(0,1)。<br />
+    ]<br />
     （注意分母用 <code>p₀</code>，不是 <code>p̂</code>，这是在 H₀ 成立下的标准误。）</li>
 </ul>
 <hr />
@@ -1797,11 +1797,11 @@
 </ul>
 </li>
 </ol>
-<p><strong>重要练习</strong>：
+<p><strong>重要练习</strong>：<br />
 设总体 X ~ N(μ, σ²)， σ² 未知。现有样本 n=16， X̄=21.5， S=2.4。在 α=0.05 下检验：</p>
 <ol>
 <li>H₀: μ=20 vs H₁: μ≠20（双侧）。</li>
-<li>H₀: μ≥22 vs H₁: μ&lt;22（左侧）。
+<li>H₀: μ≥22 vs H₁: μ&lt;22（左侧）。<br />
     并求第1问的P值。</li>
 </ol>
 <p><strong>建议</strong>：现在，请你合上眼，在纸上默写出<strong>单个正态总体均值检验（Z检验、t检验）和方差检验（χ²检验）的统计量公式及拒绝域形式</strong>，以及<strong>P值的定义和决策规则</strong>。然后，找一道同时要求用临界值法和P值法解题的题目，完整地做一遍。这是假设检验部分的核心技能。</p>

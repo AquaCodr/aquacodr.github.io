@@ -1529,7 +1529,7 @@
 <hr />
 <h2 id="_2"><strong>一、 核心逻辑与知识地图</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>核心思想：</strong> 构造一个随机区间 <code>[θ̂_L, θ̂_U]</code>，使得该区间以一定的概率（置信水平）覆盖未知参数的真值。</p>
-<p><strong>逻辑主线：</strong>
+<p><strong>逻辑主线：</strong><br />
 <strong>待估参数 θ</strong> → <strong>寻找关键统计量（含 θ 且分布已知）</strong> → <strong>根据分布和置信度确定分位数</strong> → <strong>将不等式变形为关于 θ 的区间</strong> → <strong>得到置信区间</strong></p>
 <p><strong>关键区别：</strong></p>
 <ul>
@@ -1540,10 +1540,10 @@
 <h2 id="_3"><strong>二、 核心知识点精讲与易错点</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="1"><strong>1. 基本概念</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>置信区间</strong>：设 <code>θ</code> 为总体参数，<code>(θ̂_L, θ̂_U)</code> 是由样本确定的两个统计量，满足：
-    [
-    P( \thetâ_L &lt; \theta &lt; \thetâ_U ) = 1 - \alpha
-    ]
+<li><strong>置信区间</strong>：设 <code>θ</code> 为总体参数，<code>(θ̂_L, θ̂_U)</code> 是由样本确定的两个统计量，满足：<br />
+    [<br />
+    P( \thetâ_L &lt; \theta &lt; \thetâ_U ) = 1 - \alpha<br />
+    ]<br />
     则称 <code>(θ̂_L, θ̂_U)</code> 是 <code>θ</code> 的置信水平为 <code>1-α</code> 的<strong>置信区间</strong>。</li>
 <li><strong>置信水平 <code>1-α</code></strong>：区间包含真值的概率。通常取 <code>0.90</code>, <code>0.95</code>, <code>0.99</code>。<code>α</code> 称为<strong>显著性水平</strong>，是区间不包含真值的风险。</li>
 <li><strong>精确理解</strong>：<code>θ</code> 是固定的未知常数，区间是随机的。置信水平 <code>1-α</code> 的含义是：<strong>在大量重复抽样下，用该方法构造的区间中，有大约 <code>(1-α)×100%</code> 的区间包含真值 <code>θ</code></strong>。而不是“<code>θ</code> 有 <code>1-α</code> 的概率落在这个区间里”（后者是贝叶斯观点）。</li>
@@ -1553,10 +1553,10 @@
 <ol>
 <li><strong>选择统计量</strong>：找一个包含待估参数 <code>θ</code> 和样本的统计量 <code>G = G(X₁,…,Xₙ; θ)</code>，要求其分布已知且<strong>不依赖于任何其他未知参数</strong>。</li>
 <li><strong>确定分布</strong>：根据抽样分布理论，确定 <code>G</code> 的精确分布或渐近分布。</li>
-<li><strong>确定分位数</strong>：对给定的置信水平 <code>1-α</code>，找到常数 <code>a</code>, <code>b</code>，使得
-    [
-    P(a &lt; G &lt; b) = 1 - \alpha。
-    ]
+<li><strong>确定分位数</strong>：对给定的置信水平 <code>1-α</code>，找到常数 <code>a</code>, <code>b</code>，使得<br />
+    [<br />
+    P(a &lt; G &lt; b) = 1 - \alpha。<br />
+    ]<br />
     通常取对称或等尾的分位数，即 <code>P(G ≤ a) = P(G ≥ b) = α/2</code>。</li>
 <li><strong>不等式变形</strong>：将事件 <code>{a &lt; G &lt; b}</code> 等价地转化为关于 <code>θ</code> 的不等式 <code>{θ̂_L &lt; θ &lt; θ̂_U}</code>。</li>
 <li><strong>写出区间</strong>：置信区间为 <code>(θ̂_L, θ̂_U)</code>。</li>
@@ -1640,19 +1640,19 @@
 </table>
 <h3 id="5"><strong>5. 非正态总体或大样本情形</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>均值 μ 的区间估计（大样本）</strong>：由中心极限定理，当 <code>n</code> 较大时，<code>(X̄ - μ)/(S/√n) ≈ N(0,1)</code>。因此 <code>μ</code> 的近似 <code>1-α</code> 置信区间为：
-    [
-    \overline{X} \pm z_{\alpha/2} \cdot \frac{S}{\sqrt{n}}
-    ]
+<li><strong>均值 μ 的区间估计（大样本）</strong>：由中心极限定理，当 <code>n</code> 较大时，<code>(X̄ - μ)/(S/√n) ≈ N(0,1)</code>。因此 <code>μ</code> 的近似 <code>1-α</code> 置信区间为：<br />
+    [<br />
+    \overline{X} \pm z_{\alpha/2} \cdot \frac{S}{\sqrt{n}}<br />
+    ]<br />
     （与正态总体 <code>σ²</code> 未知时形式相同，但这里是近似分布）。</li>
-<li><strong>比例 p 的区间估计（0-1分布）</strong>：设总体 <code>X ~ B(1, p)</code>，样本 <code>X₁,…,Xₙ</code>，样本比例 <code>p̂ = X̄</code>。当 <code>n</code> 较大时，由中心极限定理，
-    [
-    \frac{\hat{p} - p}{\sqrt{\hat{p}(1-\hat{p})/n}} \stackrel{\text{近似}}{\sim} N(0,1)。
-    ]
-    <code>p</code> 的近似 <code>1-α</code> 置信区间为：
-    [
-    \hat{p} \pm z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}。
-    ]
+<li><strong>比例 p 的区间估计（0-1分布）</strong>：设总体 <code>X ~ B(1, p)</code>，样本 <code>X₁,…,Xₙ</code>，样本比例 <code>p̂ = X̄</code>。当 <code>n</code> 较大时，由中心极限定理，<br />
+    [<br />
+    \frac{\hat{p} - p}{\sqrt{\hat{p}(1-\hat{p})/n}} \stackrel{\text{近似}}{\sim} N(0,1)。<br />
+    ]<br />
+<code>p</code> 的近似 <code>1-α</code> 置信区间为：<br />
+    [<br />
+    \hat{p} \pm z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}。<br />
+    ]<br />
     （更精确的可用 <code>p</code> 代替 <code>p̂</code> 在根号内，但需解二次方程。）</li>
 </ul>
 <hr />
@@ -1690,10 +1690,10 @@
 <ul>
 <li>区间长度 <code>L = 2 × 分位数 × (标准误)</code>。</li>
 <li>对于均值估计（方差已知时），<code>L = 2 z_{α/2} σ/√n</code>。</li>
-<li>给定置信水平 <code>1-α</code> 和允许误差 <code>d</code>（半长），可解出所需样本量：
-    [
-    n \ge \left( \frac{z_{\alpha/2} \cdot \sigma}{d} \right)^2。
-    ]
+<li>给定置信水平 <code>1-α</code> 和允许误差 <code>d</code>（半长），可解出所需样本量：<br />
+    [<br />
+    n \ge \left( \frac{z_{\alpha/2} \cdot \sigma}{d} \right)^2。<br />
+    ]<br />
     （若 <code>σ</code> 未知，可用样本标准差 <code>S</code> 预估计。）</li>
 </ul>
 <hr />
@@ -1708,7 +1708,7 @@
 </ul>
 </li>
 </ol>
-<p><strong>重要练习</strong>：
+<p><strong>重要练习</strong>：<br />
 设总体 <code>X ~ N(μ, σ²)</code>， <code>σ²</code> 未知。现有样本容量 <code>n=9</code>，测得 <code>Σx_i = 45</code>， <code>Σx_i² = 285</code>。</p>
 <ol>
 <li>求 <code>μ</code> 的 95% 置信区间。</li>

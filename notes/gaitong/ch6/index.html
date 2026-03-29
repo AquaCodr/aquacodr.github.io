@@ -1429,7 +1429,7 @@
 <hr />
 <h2 id="_2"><strong>一、 核心逻辑与知识地图</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p><strong>核心思想：</strong> 从总体中抽取样本，构造不含未知参数的样本函数（统计量），研究这些统计量的分布（抽样分布），为统计推断（估计、检验）提供理论依据。</p>
-<p><strong>逻辑主线：</strong>
+<p><strong>逻辑主线：</strong><br />
 <strong>总体</strong> → <strong>样本（随机、独立同分布）</strong> → <strong>统计量</strong> → <strong>抽样分布（特别是来自正态总体的三大分布）</strong></p>
 <p><strong>核心难点：</strong> 理解“统计量的分布”这一概念，并熟记正态总体下的三大抽样分布及其性质。</p>
 <hr />
@@ -1439,8 +1439,8 @@
 <li><strong>总体</strong>：研究对象的全体。通常用一个随机变量 <code>X</code> 及其分布 <code>F(x; θ)</code> 表示。</li>
 <li><strong>样本</strong>：从总体中随机抽取的 <code>n</code> 个个体 <code>(X₁, X₂, ..., Xₙ)</code>。要求：<ol>
 <li><strong>代表性</strong>：每个 <code>X_i</code> 与总体 <code>X</code> 同分布。</li>
-<li><strong>独立性</strong>：<code>X₁, ..., Xₙ</code> 相互独立。
-    <strong>简称为：简单随机样本，独立同分布（i.i.d）</strong>。</li>
+<li><strong>独立性</strong>：<code>X₁, ..., Xₙ</code> 相互独立。<br />
+<strong>简称为：简单随机样本，独立同分布（i.i.d）</strong>。</li>
 </ol>
 </li>
 <li><strong>样本值/观测值</strong>：样本的一次具体实现 <code>(x₁, x₂, ..., xₙ)</code>。注意区分<strong>随机样本</strong>（大写X，是随机变量）和<strong>样本值</strong>（小写x，是具体数）。</li>
@@ -1454,14 +1454,14 @@
 </ol>
 </li>
 <li><strong>常用统计量（必须熟记定义和性质）</strong>：<ol>
-<li><strong>样本均值</strong>：
-    [ \overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_i ]
+<li><strong>样本均值</strong>：<br />
+    [ \overline{X} = \frac{1}{n} \sum_{i=1}^{n} X_i ]<br />
 性质：<code>E(X̄) = μ</code>， <code>D(X̄) = σ²/n</code>。</li>
-<li><strong>样本方差</strong>（<strong>注意分母是 n-1</strong>）：
-    [
-    S^2 = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \overline{X})^2
-    ]
-<strong>重要性质</strong>：<code>E(S²) = σ²</code>。即 <code>S²</code> 是 <code>σ²</code> 的<strong>无偏估计</strong>。这就是为什么分母是 <code>n-1</code> 而不是 <code>n</code>。
+<li><strong>样本方差</strong>（<strong>注意分母是 n-1</strong>）：<br />
+    [<br />
+    S^2 = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \overline{X})^2<br />
+    ]<br />
+<strong>重要性质</strong>：<code>E(S²) = σ²</code>。即 <code>S²</code> 是 <code>σ²</code> 的<strong>无偏估计</strong>。这就是为什么分母是 <code>n-1</code> 而不是 <code>n</code>。<br />
 （如果分母用 <code>n</code>，记为 <code>S_n^2</code>，则 <code>E(S_n²) = (n-1)σ²/n</code>，是有偏的。）</li>
 <li><strong>样本标准差</strong>：<code>S = √S²</code>。</li>
 <li><strong>样本 k 阶原点矩</strong>：<code>A_k = (1/n) Σ X_i^k</code>。</li>
@@ -1484,43 +1484,43 @@
 <p><strong>必须熟记的结论：</strong></p>
 <ol>
 <li>
-<p><strong>样本均值分布</strong>：
-    [
-    \overline{X} \sim N\left( \mu, \frac{\sigma^2}{n} \right)
-    ]
-    标准化得：
-    [
-    \frac{\overline{X} - \mu}{\sigma / \sqrt{n}} \sim N(0, 1)
-    ]
-    <strong>这是后续一切的基础。</strong></p>
+<p><strong>样本均值分布</strong>：<br />
+    [<br />
+    \overline{X} \sim N\left( \mu, \frac{\sigma^2}{n} \right)<br />
+    ]<br />
+    标准化得：<br />
+    [<br />
+    \frac{\overline{X} - \mu}{\sigma / \sqrt{n}} \sim N(0, 1)<br />
+    ]<br />
+<strong>这是后续一切的基础。</strong></p>
 </li>
 <li>
 <p><strong>卡方分布 (χ² distribution)</strong>：</p>
 <ul>
 <li>定义：若 <code>Z₁, ..., Z_k</code> 独立且均服从标准正态分布 <code>N(0,1)</code>，则 <code>χ² = Σ Z_i²</code> 服从自由度为 <code>k</code> 的卡方分布，记作 <code>χ² ~ χ²(k)</code>。</li>
 <li><strong>性质</strong>：<code>E(χ²(k)) = k</code>， <code>D(χ²(k)) = 2k</code>。</li>
-<li><strong>与样本方差的关系（核心定理）</strong>：
-    [
-    \frac{(n-1)S^2}{\sigma^2} = \frac{\sum_{i=1}^{n} (X_i - \overline{X})^2}{\sigma^2} \sim \chi^2(n-1)
-    ]
-    <strong>自由度是 n-1，不是 n</strong>。这是因为 <code>Σ(X_i - X̄) = 0</code>，这 <code>n</code> 个偏差项有一个线性约束，导致独立变量只有 <code>n-1</code> 个。</li>
+<li><strong>与样本方差的关系（核心定理）</strong>：<br />
+    [<br />
+    \frac{(n-1)S^2}{\sigma^2} = \frac{\sum_{i=1}^{n} (X_i - \overline{X})^2}{\sigma^2} \sim \chi^2(n-1)<br />
+    ]<br />
+<strong>自由度是 n-1，不是 n</strong>。这是因为 <code>Σ(X_i - X̄) = 0</code>，这 <code>n</code> 个偏差项有一个线性约束，导致独立变量只有 <code>n-1</code> 个。</li>
 <li>另外：<code>Σ[(X_i - μ)²/σ²] ~ χ²(n)</code>（因为 <code>(X_i - μ)/σ ~ N(0,1)</code>，且独立）。</li>
 </ul>
 </li>
 <li>
 <p><strong>t 分布 (Student’s t distribution)</strong>：</p>
 <ul>
-<li>定义：若 <code>Z ~ N(0,1)</code>， <code>Y ~ χ²(k)</code>，且 <code>Z</code> 与 <code>Y</code> 独立，则
-    [
-    T = \frac{Z}{\sqrt{Y/k}} \sim t(k)
+<li>定义：若 <code>Z ~ N(0,1)</code>， <code>Y ~ χ²(k)</code>，且 <code>Z</code> 与 <code>Y</code> 独立，则<br />
+    [<br />
+    T = \frac{Z}{\sqrt{Y/k}} \sim t(k)<br />
     ]</li>
 <li><strong>性质</strong>：<code>t</code> 分布密度关于 <code>0</code> 对称，形状类似标准正态但尾部更厚。当 <code>k → ∞</code> 时，<code>t(k) → N(0,1)</code>。</li>
-<li><strong>与样本均值的关系（核心定理，当 σ² 未知时用）</strong>：
-    由 <code>(X̄ - μ)/(σ/√n) ~ N(0,1)</code> 与 <code>(n-1)S²/σ² ~ χ²(n-1)</code>，且可以证明 <strong>X̄ 与 S² 相互独立</strong>（正态总体下的重要结论），可得：
-    [
-    T = \frac{\overline{X} - \mu}{S / \sqrt{n}} \sim t(n-1)
-    ]
-    <strong>这是 t 检验的理论基础。</strong></li>
+<li><strong>与样本均值的关系（核心定理，当 σ² 未知时用）</strong>：<br />
+    由 <code>(X̄ - μ)/(σ/√n) ~ N(0,1)</code> 与 <code>(n-1)S²/σ² ~ χ²(n-1)</code>，且可以证明 <strong>X̄ 与 S² 相互独立</strong>（正态总体下的重要结论），可得：<br />
+    [<br />
+    T = \frac{\overline{X} - \mu}{S / \sqrt{n}} \sim t(n-1)<br />
+    ]<br />
+<strong>这是 t 检验的理论基础。</strong></li>
 </ul>
 </li>
 <li>
@@ -1535,43 +1535,43 @@
 <p>设 <code>X ~ N(μ₁, σ₁²)</code>， <code>Y ~ N(μ₂, σ₂²)</code>，样本分别为 <code>X₁, ..., X_{n₁}</code> 和 <code>Y₁, ..., Y_{n₂}</code>，且两个样本相互独立。记 <code>X̄</code>， <code>Ȳ</code>， <code>S₁²</code>， <code>S₂²</code> 分别为样本均值和样本方差。</p>
 <ol>
 <li>
-<p><strong>均值差 <code>X̄ - Ȳ</code> 的分布</strong>：
-    [
-    \overline{X} - \overline{Y} \sim N\left( \mu_1 - \mu_2, \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2} \right)
-    ]
-    标准化得：
-    [
-    \frac{(\overline{X} - \overline{Y}) - (\mu_1 - \mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}} \sim N(0,1)
+<p><strong>均值差 <code>X̄ - Ȳ</code> 的分布</strong>：<br />
+    [<br />
+    \overline{X} - \overline{Y} \sim N\left( \mu_1 - \mu_2, \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2} \right)<br />
+    ]<br />
+    标准化得：<br />
+    [<br />
+    \frac{(\overline{X} - \overline{Y}) - (\mu_1 - \mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}} \sim N(0,1)<br />
     ]</p>
 </li>
 <li>
 <p><strong>F 分布 (Fisher–Snedecor distribution)</strong>：</p>
 <ul>
-<li>定义：若 <code>U ~ χ²(m)</code>， <code>V ~ χ²(n)</code>，且 <code>U</code> 与 <code>V</code> 独立，则
-    [
-    F = \frac{U/m}{V/n} \sim F(m, n)
+<li>定义：若 <code>U ~ χ²(m)</code>， <code>V ~ χ²(n)</code>，且 <code>U</code> 与 <code>V</code> 独立，则<br />
+    [<br />
+    F = \frac{U/m}{V/n} \sim F(m, n)<br />
     ]</li>
 <li><strong>性质</strong>：<code>F(m, n)</code> 与 <code>F(n, m)</code> 有关系：<code>F_{1-α}(m, n) = 1 / F_{α}(n, m)</code>。</li>
-<li><strong>与样本方差比的关系（核心定理）</strong>：
-    由 <code>(n₁-1)S₁²/σ₁² ~ χ²(n₁-1)</code>， <code>(n₂-1)S₂²/σ₂² ~ χ²(n₂-1)</code>，且独立，可得：
-    [
-    F = \frac{S_1^2 / \sigma_1^2}{S_2^2 / \sigma_2^2} = \frac{\sigma_2^2}{\sigma_1^2} \cdot \frac{S_1^2}{S_2^2} \sim F(n_1-1, n_2-1)
-    ]
-    特别地，若 <code>σ₁² = σ₂²</code>，则 <code>(S₁²/S₂²) ~ F(n₁-1, n₂-1)</code>。
-    <strong>这是方差比检验（F检验）的理论基础。</strong></li>
+<li><strong>与样本方差比的关系（核心定理）</strong>：<br />
+    由 <code>(n₁-1)S₁²/σ₁² ~ χ²(n₁-1)</code>， <code>(n₂-1)S₂²/σ₂² ~ χ²(n₂-1)</code>，且独立，可得：<br />
+    [<br />
+    F = \frac{S_1^2 / \sigma_1^2}{S_2^2 / \sigma_2^2} = \frac{\sigma_2^2}{\sigma_1^2} \cdot \frac{S_1^2}{S_2^2} \sim F(n_1-1, n_2-1)<br />
+    ]<br />
+    特别地，若 <code>σ₁² = σ₂²</code>，则 <code>(S₁²/S₂²) ~ F(n₁-1, n₂-1)</code>。<br />
+<strong>这是方差比检验（F检验）的理论基础。</strong></li>
 </ul>
 </li>
 <li>
-<p><strong>两总体均值差的 t 分布（方差未知但相等）</strong>：
-    当 <code>σ₁² = σ₂² = σ²</code> 但未知时，定义<strong>合并样本方差</strong>：
-    [
-    S_p^2 = \frac{(n_1 - 1)S_1^2 + (n_2 - 1)S_2^2}{n_1 + n_2 - 2}
-    ]
-    则：
-    [
-    T = \frac{(\overline{X} - \overline{Y}) - (\mu_1 - \mu_2)}{S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \sim t(n_1 + n_2 - 2)
-    ]
-    <strong>这是两独立样本 t 检验（等方差）的理论基础。</strong></p>
+<p><strong>两总体均值差的 t 分布（方差未知但相等）</strong>：<br />
+    当 <code>σ₁² = σ₂² = σ²</code> 但未知时，定义<strong>合并样本方差</strong>：<br />
+    [<br />
+    S_p^2 = \frac{(n_1 - 1)S_1^2 + (n_2 - 1)S_2^2}{n_1 + n_2 - 2}<br />
+    ]<br />
+    则：<br />
+    [<br />
+    T = \frac{(\overline{X} - \overline{Y}) - (\mu_1 - \mu_2)}{S_p \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \sim t(n_1 + n_2 - 2)<br />
+    ]<br />
+<strong>这是两独立样本 t 检验（等方差）的理论基础。</strong></p>
 </li>
 </ol>
 <hr />
@@ -1611,7 +1611,7 @@
 <li><strong>关系</strong>：<code>t</code> 分布与 <code>F</code> 分布有什么关系？（<code>t²(k) ~ F(1, k)</code>）</li>
 <li><strong>应用</strong>：从 <code>N(μ, σ²)</code> 中抽取样本 <code>n=16</code>，已知 <code>σ²=4</code>，求 <code>P(|X̄ - μ| &lt; 1)</code>。（用 <code>Z = (X̄-μ)/(2/4) = 2(X̄-μ) ~ N(0,1)</code>，答案是 <code>2Φ(2)-1</code>）</li>
 </ol>
-<p><strong>重要练习</strong>：
+<p><strong>重要练习</strong>：<br />
 设 <code>X₁, ..., Xₙ</code> 来自 <code>N(μ, σ²)</code>， <code>X̄</code> 和 <code>S²</code> 是样本均值和方差。判断下列统计量的分布：</p>
 <ol>
 <li><code>(X̄ - μ) / (σ/√n)</code></li>
