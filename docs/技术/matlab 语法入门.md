@@ -80,6 +80,7 @@
 | $\sqrt{x}$    | sqrt(x) or x^0.5 | $\log x$                    | log10(x)                  |        |
 | $\pi$         | pi               | $\\                         | x$                        | abs(x) |
 | $e$           | exp(1)           |                             |                           |        |
+
 #### 基本数学函数：
 
 |**函数**|**说明**|**函数**|**说明**|
@@ -122,56 +123,72 @@ stem %离散的图
 - for循环
 
 格式：
-for variable=expression 
+ ```
+  for variable=expression 
 	statement
  end
+ ```
  
 例子：
+```
 A=zeros(1,1000);
 for i=1:length(A)  
 	A(i)=sqrt(i);  
 end
+```
+
 
 - for循环嵌套
 
 格式：
+```
 for variable1=expression1  
 	statement1  
 	for variable2=expression2  
 		statement2  
 	end  
 end
+```
 
 例子：
+```
 A=zeros(30,50);  
 for i=1:size(A,1)  
 	for j=1:size(A,2)  
 		A(i,j)=i^2+j^2;  
 	end  
 end
+```
 #### while-end结构
 
 格式：
+```
 while condition  
 	statement 
 end
+```
 
 例子：
+```
 num=0;  
 target=10;  
 while abs(target‐num^2) > 0.01  
 	num=num+0.001;  
 end
+```
 #### if-else-end结构
 
 - 只有if
 
 格式：
+```
 if condition  
 	statement  
 end
+```
 
 例子：
+```
 Signal=rand(1,100)*1000; %随机信号  
 Signal_new=Signal;  
 for i=1:length(Signal)  
@@ -179,10 +196,12 @@ for i=1:length(Signal)
 		Signal_new(i)=Signal(i)*10;  
 	end  
 end
+```
 
 - if-elseif-else
 
 格式：
+```
 If condition1  
 	statement 1  
 elseif condition2  
@@ -190,8 +209,10 @@ elseif condition2
 else  
 	statement 3  
 end
+```
 
 例子：
+```
 Signal=rand(1,100)*1000;  
 Signal_new=Signal;  
 for i=1:length(Signal)  
@@ -201,3 +222,4 @@ for i=1:length(Signal)
 		Signal_new(i)=Signal(i)*2;  
 	end  
 end
+```
