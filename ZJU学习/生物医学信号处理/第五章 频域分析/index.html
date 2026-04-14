@@ -1099,8 +1099,8 @@
 
 <p>在分析线性时不变（LTI）系统时，时域的卷积运算往往极为繁琐。引入频域分析后，我们可以通过“频率”这一全新的视角，将复杂的微积分转化为直观的代数运算，从而更深刻地理解系统对信号的处理机制。</p>
 <h2 id="1-homega">1. 核心利器：系统函数 <span class="arithmatex">\(H(\omega)\)</span><a class="headerlink" href="#1-homega" title="Permanent link">&para;</a></h2>
-<p>在时域中，系统的输出是输入信号与单位冲激响应的卷积。而在频域中，这个过程变成了一个极其优雅的乘法：<br />
-$<span class="arithmatex">\(Y(\omega) = X(\omega)H(\omega)\)</span>$</p>
+<p>在时域中，系统的输出是输入信号与单位冲激响应的卷积。而在频域中，这个过程变成了一个极其优雅的乘法：</p>
+<div class="arithmatex">\[Y(\omega) = X(\omega)H(\omega)\]</div>
 <p>这里的 <span class="arithmatex">\(H(\omega)\)</span> 就是<strong>系统函数（频率响应）</strong>，它包含两个关键维度：<br />
 * <strong>幅频特性 <span class="arithmatex">\(|H(\omega)|\)</span></strong>：决定系统如何放大或缩小特定频率的信号。<br />
 * <strong>相频特性 <span class="arithmatex">\(\angle H(\omega)\)</span></strong>：决定系统对不同频率信号产生的相位偏移。</p>
