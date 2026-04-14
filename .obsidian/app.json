@@ -8,5 +8,6 @@
     "/[aA][tT][tT][aA][cC][hH][mM][eE][nN][tT][sS]/",
     "/[sS][iI][tT][eE]/"
   ],
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "spellcheck": false
 }
