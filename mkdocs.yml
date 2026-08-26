@@ -3,19 +3,19 @@ site_name: AquaCodr's Blog
 site_description: 学以聚之，思以辨之，偶得而栖之
 site_author: AquaCodr
 site_url: https://aquacodr.github.io/
+repo_url: https://github.com/Aquacodr/aquacodr.github.io
+repo_name: aquacodr.github.io
 
 # 主题配置
 theme:
   name: material
   language: zh
   icon:
-    logo: material/school-outline           # 新增：极简学术风 Logo
+    logo: material/school-outline
   favicon: assets/favicon.svg
-  
-  # 定制字体：提升代码和正文的阅读质感
-  font:
-    text: Noto Sans SC       
-    code: JetBrains Mono     
+
+  # 字体：改用系统字体栈，避免 Google Fonts 在国内加载失败导致字体异常
+  font: false
 
   # 日夜间沉浸配色切换
   palette:
@@ -28,41 +28,37 @@ theme:
         name: 切换到夜间模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: indigo
+      primary: indigo
+      accent: cyan
       toggle:
         icon: material/weather-night
         name: 切换到浅色模式
 
-  # 启用核心功能（已剔除冗余，加入性能优化与标签）
+  # 启用核心功能
   features:
     - announce.dismiss
-    - header.autohide       # 自动隐藏顶栏，提供沉浸阅读空间
+    - header.autohide
     - navigation.tracking
     - navigation.tabs
-    #- navigation.sections
+    - navigation.path        # 面包屑导航
+    - navigation.indexes     # 栏目点击直达其 index 页
     - navigation.top
     - navigation.footer
-    - navigation.prune      # 精简左侧导航树，提升加载速度
-    - navigation.tags       # 新增：在文章顶部显示标签
+    - navigation.tags
     - search.suggest
     - search.highlight
     - search.share
     - content.tabs.link
     - content.tooltips
     - content.code.copy
-    - content.action.edit
-    - content.action.view
+    - content.action.edit      # 配合 repo_url：每页显示"编辑此页"按钮
     - content.code.annotate
-    #- palette.toggle
-
 
 # 左下角的版权声明
-copyright: Copyright &copy; 2026 AquaCodr/All Rights Reserved. 
+copyright: Copyright &copy; 2026 AquaCodr / All Rights Reserved
 
-# 额外配置（已清理错误的 math 语法）
+# 额外配置
 extra:
-  generator: true
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/aquacodr
@@ -87,7 +83,8 @@ plugins:
   - callouts
   - awesome-pages:
       collapse_single_pages: true
-  - tags                  # 新增：启用标签解析插件
+  - tags:
+      tags_file: tags.md     # 生成标签聚合索引页
   - git-revision-date-localized:
       enabled: true
       type: date
