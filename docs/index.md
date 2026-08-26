@@ -10,12 +10,12 @@ title: 主页
   <div class="hero-inner">
     <p class="hero-eyebrow">AQUACODR'S BLOG</p>
     <h1 class="hero-title">学以聚之，思以辨之<br>偶得而栖之</h1>
-    <p class="hero-sub">一个记录学习、阅读与生活感悟的数字花园，欢迎驻足。</p>
+    <p class="hero-sub">一个我用来记录学习、生活与阅读感悟的地方，欢迎驻足。</p>
   </div>
 </div>
 
 <!-- ==================== 光影收藏 ==================== -->
-<h2 class="gallery-title">喜欢的画面</h2>
+<h2 class="gallery-title">makio、asa、erii</h2>
 
 <div class="gallery">
   <div class="gallery-item">
