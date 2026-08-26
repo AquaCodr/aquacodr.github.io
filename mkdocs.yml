@@ -41,7 +41,6 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.path        # 面包屑导航
-    - navigation.indexes     # 栏目点击直达其 index 页
     - navigation.top
     - navigation.footer
     - search.suggest
