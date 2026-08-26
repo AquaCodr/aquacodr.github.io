@@ -67,10 +67,7 @@
 .hero-sub {
     font-size: 1.05rem;
     color: var(--md-default-fg-color--light);
-    margin-bottom: 1.7rem;
-}
-.hero-actions .md-button {
-    margin: 0.25rem 0.4rem;
+    margin-bottom: 1.2rem;
 }
 
 /* ==========================================================================
@@ -105,8 +102,127 @@
     margin-top: 0.35rem;
 }
 
+/* ==========================================================================
+   首页内容导航卡片
+   ========================================================================== */
+.nav-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0 2.4rem;
+}
+.nav-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem 1.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--md-default-bg-color--light);
+    background: linear-gradient(180deg, var(--md-default-bg-color--lightest), transparent);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none !important;
+    color: var(--md-default-fg-color);
+}
+.nav-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--md-primary-color);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+.nav-card-icon {
+    font-size: 1.9rem;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+}
+.nav-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--md-primary-fg-color);
+    margin-bottom: 0.35rem;
+}
+.nav-card-desc {
+    font-size: 0.9rem;
+    color: var(--md-default-fg-color--light);
+    line-height: 1.6;
+    flex: 1;
+}
+.nav-card-link {
+    margin-top: 0.9rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--md-primary-fg-color);
+}
+/* 第 5 张卡片在 2 列布局中占满整行（横跨两列，更整齐） */
+.nav-card:last-child {
+    grid-column: 1 / -1;
+}
+
+/* ==========================================================================
+   首页最近更新列表
+   ========================================================================== */
+.recent-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0.6rem 0 1.5rem;
+}
+.recent-item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.8rem 0.9rem;
+    border-bottom: 1px dashed var(--md-default-bg-color--light);
+    border-radius: 8px;
+    text-decoration: none !important;
+    color: var(--md-default-fg-color);
+    transition: all 0.2s ease;
+}
+.recent-item:last-child {
+    border-bottom: none;
+}
+.recent-item:hover {
+    background: var(--md-default-bg-color--lightest);
+    padding-left: 1.15rem;
+}
+.recent-date {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--md-primary-fg-color);
+    background: color-mix(in srgb, var(--md-primary-fg-color) 12%, transparent);
+    padding: 0.22rem 0.55rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+.recent-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.recent-cat {
+    font-size: 0.78rem;
+    color: var(--md-default-fg-color--light);
+    background: var(--md-default-bg-color--lightest);
+    padding: 0.16rem 0.55rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.recent-arrow {
+    color: var(--md-primary-fg-color);
+    opacity: 0;
+    transform: translateX(-2px);
+    transition: all 0.2s ease;
+}
+.recent-item:hover .recent-arrow {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
 /* ---------- 响应式：小屏适配 ---------- */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .hero-title { font-size: 1.9rem; }
     .stat-bar { gap: 1.4rem; }
+    .nav-cards { grid-template-columns: 1fr; }
+    .nav-card:last-child { grid-column: auto; }
+    .recent-cat { display: none; }
 }

@@ -11,10 +11,6 @@ title: 主页
     <p class="hero-eyebrow">AQUACODR'S BLOG</p>
     <h1 class="hero-title">学以聚之，思以辨之<br>偶得而栖之</h1>
     <p class="hero-sub">一个记录学习、阅读与生活感悟的数字花园，欢迎驻足。</p>
-    <div class="hero-actions">
-      <a href="阅读/" class="md-button md-button--primary">开始阅读</a>
-      <a href="自学/plan/" class="md-button">自学路线</a>
-    </div>
   </div>
 </div>
 
@@ -25,57 +21,82 @@ title: 主页
   <div class="stat"><span class="stat-num">∞</span><span class="stat-label">好奇心</span></div>
 </div>
 
-<!-- ==================== 栏目导航 ==================== -->
+<!-- ==================== 内容导航 ==================== -->
 ## 🧭 内容导航
 
-<div class="grid cards" markdown>
+<div class="nav-cards">
 
--   📚 **课程笔记**
+<a class="nav-card" href="ZJU学习/">
+  <span class="nav-card-icon">📚</span>
+  <span class="nav-card-title">课程笔记</span>
+  <span class="nav-card-desc">微机原理、概率统计、生物医学信号处理的课堂笔记。</span>
+  <span class="nav-card-link">进入 →</span>
+</a>
 
-    ---
+<a class="nav-card" href="自学/">
+  <span class="nav-card-icon">🎓</span>
+  <span class="nav-card-title">自学之路</span>
+  <span class="nav-card-desc">从 CS50 到分布式系统的自学计划与课程笔记。</span>
+  <span class="nav-card-link">进入 →</span>
+</a>
 
-    微机原理、概率统计、生物医学信号处理的课堂笔记。
-    [进入 ➔](ZJU学习/index.md)
+<a class="nav-card" href="技术/">
+  <span class="nav-card-icon">🛠️</span>
+  <span class="nav-card-title">技术笔记</span>
+  <span class="nav-card-desc">MATLAB 与各种效率工具的折腾记录。</span>
+  <span class="nav-card-link">进入 →</span>
+</a>
 
--   🎓 **自学之路**
+<a class="nav-card" href="阅读/">
+  <span class="nav-card-icon">☕</span>
+  <span class="nav-card-title">阅读</span>
+  <span class="nav-card-desc">读书笔记、讲座感悟，个人向的阅读留痕。</span>
+  <span class="nav-card-link">进入 →</span>
+</a>
 
-    ---
-
-    从 CS50 到分布式系统的自学计划与课程笔记。
-    [进入 ➔](自学/index.md)
-
--   🛠️ **技术笔记**
-
-    ---
-
-    MATLAB 与各种效率工具的折腾记录。
-    [进入 ➔](技术/index.md)
-
--   ☕ **阅读**
-
-    ---
-
-    读书笔记、讲座感悟，个人向的阅读留痕。
-    [进入 ➔](阅读/index.md)
-
--   🧩 **记忆碎片**
-
-    ---
-
-    似水流年、朝花夕拾与郁闷小屋的随记。
-    [进入 ➔](记忆碎片/index.md)
+<a class="nav-card" href="记忆碎片/">
+  <span class="nav-card-icon">🧩</span>
+  <span class="nav-card-title">记忆碎片</span>
+  <span class="nav-card-desc">似水流年、朝花夕拾与郁闷小屋的随记。</span>
+  <span class="nav-card-link">进入 →</span>
+</a>
 
 </div>
 
 <!-- ==================== 最近更新 ==================== -->
 ## 🕒 最近更新
 
-- **生物医学信号处理** · [第五章 频域分析](ZJU学习/生物医学信号处理/第五章-频域分析.md)
-- **微机原理** · [课程概览](ZJU学习/微机原理/index.md)
-- **自学** · [自学路线](自学/plan.md)
-- **网站** · [使用手册](网站上传信息步骤.md)
+<div class="recent-list">
 
-> 🏷️ 想按标签浏览？前往 [标签索引](tags.md)。
+<a class="recent-item" href="ZJU学习/生物医学信号处理/第五章-频域分析/">
+  <span class="recent-date">08-25</span>
+  <span class="recent-title">第五章 频域分析</span>
+  <span class="recent-cat">生物医学信号处理</span>
+  <span class="recent-arrow">→</span>
+</a>
+
+<a class="recent-item" href="ZJU学习/微机原理/">
+  <span class="recent-date">08-25</span>
+  <span class="recent-title">课程概览</span>
+  <span class="recent-cat">微机原理</span>
+  <span class="recent-arrow">→</span>
+</a>
+
+<a class="recent-item" href="自学/plan/">
+  <span class="recent-date">08-25</span>
+  <span class="recent-title">自学路线</span>
+  <span class="recent-cat">自学</span>
+  <span class="recent-arrow">→</span>
+</a>
+
+<a class="recent-item" href="网站上传信息步骤/">
+  <span class="recent-date">08-25</span>
+  <span class="recent-title">网站使用手册</span>
+  <span class="recent-cat">网站</span>
+  <span class="recent-arrow">→</span>
+</a>
+
+</div>
 
 ---
 

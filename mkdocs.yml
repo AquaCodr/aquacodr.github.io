@@ -44,7 +44,6 @@ theme:
     - navigation.indexes     # 栏目点击直达其 index 页
     - navigation.top
     - navigation.footer
-    - navigation.tags
     - search.suggest
     - search.highlight
     - search.share
@@ -83,8 +82,6 @@ plugins:
   - callouts
   - awesome-pages:
       collapse_single_pages: true
-  - tags:
-      tags_file: tags.md     # 生成标签聚合索引页
   - git-revision-date-localized:
       enabled: true
       type: date
