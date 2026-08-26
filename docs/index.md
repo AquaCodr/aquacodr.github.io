@@ -14,13 +14,20 @@ title: 主页
   </div>
 </div>
 
-<!-- ==================== 统计条 ==================== -->
-<div class="stat-bar" markdown>
-  <div class="stat"><span class="stat-num">30+</span><span class="stat-label">篇笔记</span></div>
-  <div class="stat"><span class="stat-num">5</span><span class="stat-label">个栏目</span></div>
-  <div class="stat"><span class="stat-num">∞</span><span class="stat-label">好奇心</span></div>
+<!-- ==================== 光影收藏 ==================== -->
+<h2 class="gallery-title">喜欢的画面</h2>
+
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="images/gallery/asa.png" alt="深夜提灯，仙人掌上的花" loading="lazy">
+  </div>
+  <div class="gallery-item">
+    <img src="images/gallery/erii.png" alt="黄昏露台上的少女" loading="lazy">
+  </div>
+  <div class="gallery-item">
+    <img src="images/gallery/makio.webp" alt="戴耳机的安静少年" loading="lazy">
+  </div>
+  <div class="gallery-item">
+    <img src="images/gallery/none.jpg" alt="合十祈愿的少年" loading="lazy">
+  </div>
 </div>
-
----
-
-> *保持好奇，持续构建。*
