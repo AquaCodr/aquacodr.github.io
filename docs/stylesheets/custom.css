@@ -122,3 +122,38 @@
     .hero-title { font-size: 1.9rem; }
     .gallery { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   首页 · 东京爱情故事卡片
+   ========================================================================== */
+.tokyo-card {
+    max-width: 520px;
+    margin: 2.6rem auto 2rem;
+    text-align: center;
+}
+.tokyo-card-link {
+    display: block;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--md-default-bg-color--light);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.tokyo-card-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+    border-color: var(--md-primary-color);
+}
+.tokyo-card-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.tokyo-quote {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--md-default-fg-color--light);
+    font-style: italic;
+    letter-spacing: 0.03em;
+}
