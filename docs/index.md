@@ -17,7 +17,7 @@ title: 主页
 <!-- ==================== 东京爱情故事 ==================== -->
 <div class="tokyo-card">
   <a href="阅读/连续剧/东京爱情故事/" class="tokyo-card-link">
-    <img src="assets/v2-45d8aa43b5f209d80f19d7ace21acb9c_r.jpg" alt="赤名莉香" loading="lazy">
+    <img src="assets/tokyo love story.avif" alt="赤名莉香" loading="lazy">
   </a>
   <p class="tokyo-quote">
     如果你在东京街头，<br>
