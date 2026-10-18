@@ -55,14 +55,21 @@
     --md-footer-bg-color--dark:     #1d1512;
 }
 
-/* 暗色模式：夕阳背景图（固定 + 深色渐变罩层保证可读性） */
+/* 暗色模式：夕阳背景图（罩层上深下浅，让橙紫渐变透出来） */
 [data-md-color-scheme="slate"] body {
     background:
         linear-gradient(180deg,
-            rgba(43, 31, 25, 0.95) 0%,
-            rgba(43, 31, 25, 0.88) 55%,
-            rgba(43, 31, 25, 0.76) 100%),
+            rgba(40, 28, 34, 0.86) 0%,
+            rgba(43, 31, 25, 0.64) 45%,
+            rgba(43, 31, 25, 0.40) 100%),
         url("../assets/sunset-bg.jpg") bottom / cover no-repeat fixed;
+}
+
+/* 暗色模式：页脚半透明 + 毛玻璃，融入夕阳渐变 */
+[data-md-color-scheme="slate"] .md-footer {
+    background: rgba(36, 26, 21, 0.72);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
 }
 
 /* 暗色模式：顶栏与标签栏毛玻璃（Border 主题的标志性 blur(28px)） */
