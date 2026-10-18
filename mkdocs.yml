@@ -106,6 +106,7 @@ markdown_extensions:
   
   # ========== 实用功能 ==========
   - pymdownx.details              
+  - pymdownx.mark                 # 支持 ==高亮== 语法（兼容 Obsidian）
   - pymdownx.emoji:                
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg

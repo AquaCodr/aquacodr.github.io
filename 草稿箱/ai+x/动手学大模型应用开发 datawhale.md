@@ -1,12 +1,10 @@
 ## 大模型基础
 
-![[../../docs/assets/Pasted image 20260920120216.png|505]]
+训练要做的是提高正确目标得到的概率，而不是保证每一次随机采样都恰好选中正确答案
 
-![[../../docs/assets/Pasted image 20260920120320.png|513]]
+## 从大模型到agent组成与最小循环
 
-![[../../docs/assets/Pasted image 20260920120732.png|524]]
 
-![[../../docs/assets/Pasted image 20260920120847.png|476]]
 
 
 
