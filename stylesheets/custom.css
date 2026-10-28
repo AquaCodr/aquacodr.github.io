@@ -3,92 +3,186 @@
    ========================================================================== */
 
 /* ==========================================================================
-   Sunset 主题（移植自 Obsidian Border 主题 sunset 配色）
-   核心：日落橙 #ef8862 + 暖调深色底 + 毛玻璃 + 边框卡片
+   Lesbian Pride Flag 主题（女同骄傲旗 · 七色）
+   深橙 #D52D00 / 橙 #EF7627 / 浅橙 #FF9A56 / 白 #FFFFFF
+   粉 #D162A4 / 深粉 #B55690 / 深玫瑰 #A30262
+   --------------------------------------------------------------------------
+   七色的明度是「两端深、中间浅」的 V 形，所以按「角色」分派，而不是七色平分：
+     · 亮色模式 → 走旗的深色端（深橙顶栏 + 深玫瑰链接），白底对比 4.99 / 7.66
+     · 暗色模式 → 走旗的浅色端（浅橙强调 + 淡粉链接），暗底对比 8.99 / 5.38
+     · 白色那一横条 = 底色本身
+   约束：浅橙 / 橙 在白底只有 2.10 / 2.88，只能装饰，绝不可作正文色；
+         深玫瑰在深底只有 2.46，暗色模式禁用。
+   顶栏用的 #B32400 比旗面深橙 #D52D00 再压一档，白字对比 6.63（原 4.99），
+   同时也让顶部旗带第一段（#D52D00）能从顶栏上分辨出来（1.33:1）。
    ========================================================================== */
 :root {
-    --sunset-accent:        #ef8862;   /* 日落橙 · 主强调色 */
-    --sunset-accent-hover:  #f4a380;
-    --sunset-accent-deep:   #d96a44;
-    /* 兼容旧写法：custom.css 中多处引用 --md-primary-color，映射到主题变量 */
-    --md-primary-color: var(--md-primary-fg-color);
+    /* 旗面七色（顶部旗带与各处装饰共用） */
+    --pride-dark-orange:  #D52D00;
+    --pride-orange:       #EF7627;
+    --pride-light-orange: #FF9A56;
+    --pride-white:        #FFFFFF;
+    --pride-pink:         #D162A4;
+    --pride-dark-pink:    #B55690;
+    --pride-dark-rose:    #A30262;
+    /* 顶部七色旗带高度 */
+    --pride-band-height:  4px;
 }
 
-/* ---------- 亮色模式：暖纸质感 ---------- */
-[data-md-color-scheme="default"] {
-    --md-default-bg-color:          #faf5f0;
-    --md-default-bg-color--light:   rgba(180, 90, 50, 0.14);
-    --md-default-bg-color--lighter: rgba(180, 90, 50, 0.08);
-    --md-default-bg-color--lightest: rgba(180, 90, 50, 0.045);
-    --md-default-fg-color:          #2e2420;
-    --md-default-fg-color--light:   #6e5d55;
-    --md-default-fg-color--lighter: #a08d83;
-    --md-default-fg-color--lightest: #c4b4aa;
-    --md-primary-fg-color:          #b0502a;   /* 顶栏：焙烧橙 */
-    --md-primary-fg-color--dark:    #96421f;
-    --md-accent-fg-color:           var(--sunset-accent-deep);
-    --md-typeset-a-color:           #c2542f;   /* 链接色 */
-    --md-code-bg-color:             #f1e8e0;
-    --md-footer-bg-color:           #96421f;
-    --md-footer-bg-color--dark:     #7c3517;
+/* ---------- 亮色模式：旗白（白条那一横） ---------- */
+/* 特异性提醒：palette.css 里有
+   [data-md-color-scheme=slate][data-md-color-primary=black]{--md-typeset-a-color:...}
+   这种「两个属性」的 (0,2,0) 规则，单个属性选择器会输，
+   所以这里补一个 data-md-color-primary 属性（Material 一定会写在 body 上）。
+   否则暗色模式的正向链接会退回 Material 默认的蓝色 #5e8bde。 */
+html [data-md-color-scheme="default"][data-md-color-primary] {
+    --md-default-bg-color:          #FDF7F4;   /* 旗白偏暖 */
+    --md-default-bg-color--light:   rgba(163, 2, 98, 0.14);
+    --md-default-bg-color--lighter: rgba(163, 2, 98, 0.08);
+    --md-default-bg-color--lightest: rgba(163, 2, 98, 0.045);
+    --md-default-fg-color:          #2E1A20;
+    --md-default-fg-color--light:   #6B4A55;
+    --md-default-fg-color--lighter: #A0848D;
+    --md-default-fg-color--lightest: #C9B6BD;
+    /* 顶栏：#B32400（比旗面深橙再压一档，白字对比 6.63） */
+    --md-primary-fg-color:          #B32400;
+    --md-primary-fg-color--dark:    #961D00;
+    --md-primary-bg-color:          #FFFFFF;
+    /* 链接 / 强调：深玫瑰（7.66） */
+    --md-accent-fg-color:           var(--pride-dark-rose);
+    --md-typeset-a-color:           var(--pride-dark-rose);
+    /* 装饰用强调色：滚动条、卡片悬停描边等 */
+    --md-primary-color:             var(--pride-dark-orange);
+    --md-accent-color:              var(--pride-dark-rose);
+    --md-code-bg-color:             #FAEFEE;
+    /* 页脚：深玫瑰，与深橙顶栏首尾呼应 */
+    --md-footer-bg-color:           var(--pride-dark-rose);
+    --md-footer-bg-color--dark:     #8A024F;
+    /* 首页 hero */
+    --hero-eyebrow-color:           var(--pride-dark-rose);
+    --hero-grad-from:               var(--pride-dark-orange);
+    --hero-grad-to:                 var(--pride-dark-rose);
+    --hero-glow-1:                  rgba(239, 118, 39, 0.16);
+    --hero-glow-2:                  rgba(209, 98, 164, 0.14);
+    --hero-veil:                    rgba(255, 154, 86, 0.10);
+    --mark-bg:                      rgba(255, 154, 86, 0.42);
+    /* callout / admonition 归入旗色（见文件末尾） */
+    --cl-note:                      var(--pride-pink);
+    --cl-tip:                       var(--pride-orange);
+    --cl-warn:                      var(--pride-dark-orange);
+    --cl-danger:                    var(--pride-dark-rose);
+    --cl-quote:                     var(--pride-dark-pink);
 }
 
-/* ---------- 暗色模式：日落 sunset ---------- */
-[data-md-color-scheme="slate"] {
-    --md-default-bg-color:          #2b1f19;   /* 暖调深棕底 */
-    --md-default-bg-color--light:   hsla(16, 30%, 60%, 0.14);
-    --md-default-bg-color--lighter: hsla(16, 30%, 60%, 0.08);
-    --md-default-bg-color--lightest: hsla(16, 30%, 60%, 0.045);
-    --md-default-bg-color--dark:    #241a15;
-    --md-default-bg-color--darker:  #1d1512;
-    --md-default-bg-color--darkest: #171010;
-    --md-default-fg-color:          #ded6d3;   /* 暖白正文 */
-    --md-default-fg-color--light:   #c2b8b4;
-    --md-default-fg-color--lighter: #8b7e79;
-    --md-default-fg-color--lightest: #6e625e;
-    --md-primary-fg-color:          #3c2922;   /* 顶栏：深暖棕 */
-    --md-primary-fg-color--dark:    #2b1f19;
-    --md-accent-fg-color:           var(--sunset-accent);
-    --md-typeset-a-color:           var(--sunset-accent-hover);
-    --md-code-bg-color:             #241a15;
-    --md-footer-bg-color:           #241a15;
-    --md-footer-bg-color--dark:     #1d1512;
+/* ---------- 暗色模式：玫瑰夜（深玫瑰压暗的夜色） ---------- */
+html [data-md-color-scheme="slate"][data-md-color-primary] {
+    --md-default-bg-color:          #1E0B14;   /* 深玫瑰夜色 */
+    --md-default-bg-color--light:   hsla(330, 45%, 60%, 0.14);
+    --md-default-bg-color--lighter: hsla(330, 45%, 60%, 0.08);
+    --md-default-bg-color--lightest: hsla(330, 45%, 60%, 0.045);
+    --md-default-bg-color--dark:    #19080F;
+    --md-default-bg-color--darker:  #14060C;
+    --md-default-bg-color--darkest: #0F0409;
+    --md-default-fg-color:          #EFE3E7;   /* 带粉调的暖白正文 */
+    --md-default-fg-color--light:   #C0A6B4;
+    --md-default-fg-color--lighter: #8E7383;
+    --md-default-fg-color--lightest: #6B5462;
+    /* 顶栏：深玫瑰（下面另有毛玻璃规则） */
+    --md-primary-fg-color:          #2A101C;
+    --md-primary-fg-color--dark:    #1E0B14;
+    --md-primary-bg-color:          #F5E7EE;
+    /* 链接：淡粉 / 强调：浅橙。深玫瑰在此底仅 2.46，禁用 */
+    --md-accent-fg-color:           var(--pride-light-orange);
+    --md-typeset-a-color:           #F2A0C4;
+    --md-primary-color:             var(--pride-light-orange);
+    --md-accent-color:              #F2A0C4;
+    --md-code-bg-color:             #2A101C;
+    --md-footer-bg-color:           #2A101C;
+    --md-footer-bg-color--dark:     #19080F;
+    /* 首页 hero */
+    --hero-eyebrow-color:           var(--pride-light-orange);
+    --hero-grad-from:               var(--pride-light-orange);
+    --hero-grad-to:                 #E789C4;
+    --hero-glow-1:                  rgba(239, 118, 39, 0.14);
+    --hero-glow-2:                  rgba(163, 2, 98, 0.26);
+    --hero-veil:                    rgba(255, 154, 86, 0.05);
+    --mark-bg:                      rgba(255, 154, 86, 0.30);
+    /* callout / admonition 归入旗色（见文件末尾） */
+    --cl-note:                      #E789C4;
+    --cl-tip:                       var(--pride-light-orange);
+    --cl-warn:                      var(--pride-orange);
+    --cl-danger:                    var(--pride-pink);
+    --cl-quote:                     var(--pride-dark-pink);
 }
 
-/* 暗色模式：夕阳背景图（罩层上深下浅，让橙紫渐变透出来） */
+/* 暗色模式：橙 → 玫瑰辉光（纯 CSS，替代原 sunset-bg.jpg；不用再加载那张图） */
 [data-md-color-scheme="slate"] body {
     background:
+        radial-gradient(ellipse 90% 50% at 18% -6%, rgba(239, 118, 39, 0.20), transparent 60%),
+        radial-gradient(ellipse 65% 45% at 88% 6%,  rgba(255, 154, 86, 0.14), transparent 62%),
+        radial-gradient(ellipse 110% 60% at 50% 108%, rgba(163, 2, 98, 0.46), transparent 65%),
+        linear-gradient(180deg, #22101B 0%, #1E0B14 48%, #170710 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* 想换回原来那张夕阳照片时，把上面整块替换为：
+   background:
         linear-gradient(180deg,
             rgba(40, 28, 34, 0.86) 0%,
             rgba(43, 31, 25, 0.64) 45%,
             rgba(43, 31, 25, 0.40) 100%),
-        url("../assets/sunset-bg.jpg") bottom / cover no-repeat fixed;
-}
+        url("../assets/sunset-bg.jpg") bottom / cover no-repeat fixed; */
 
-/* 暗色模式：页脚半透明 + 毛玻璃，融入夕阳渐变 */
+/* 暗色模式：页脚半透明 + 毛玻璃，融入玫瑰夜色 */
 [data-md-color-scheme="slate"] .md-footer {
-    background: rgba(36, 26, 21, 0.72);
+    background-color: rgba(30, 11, 20, 0.72);
     backdrop-filter: blur(28px);
     -webkit-backdrop-filter: blur(28px);
 }
 
-/* 暗色模式：顶栏与标签栏毛玻璃（Border 主题的标志性 blur(28px)） */
+/* 暗色模式：顶栏与标签栏毛玻璃（Border 主题的标志性 blur(28px)）
+   注意用 background-color 而非 background，否则会清掉下面的七色旗带 */
 [data-md-color-scheme="slate"] .md-header,
 [data-md-color-scheme="slate"] .md-tabs {
-    background: rgba(43, 31, 25, 0.72);
+    background-color: rgba(30, 11, 20, 0.78);
     backdrop-filter: blur(28px);
     -webkit-backdrop-filter: blur(28px);
 }
 
-/* 高亮标记 ==text== 染成日落橙 */
+/* ==========================================================================
+   顶部七色旗带
+   挂在 sticky 顶栏上（position: sticky 本身即定位元素），滚动时随顶栏移动；
+   颜色从左到右严格按旗序，白色那一格正好压在深橙顶栏上，最显眼。
+   ========================================================================== */
+/* .md-header 本身是 position: sticky（已是定位元素），
+   ::before 可直接以其为包含块，切勿改写为 relative 否则 sticky 失效 */
+.md-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--pride-band-height);
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        var(--pride-dark-orange)  0        14.2857%,
+        var(--pride-orange)       14.2857% 28.5714%,
+        var(--pride-light-orange) 28.5714% 42.8571%,
+        var(--pride-white)        42.8571% 57.1429%,
+        var(--pride-pink)         57.1429% 71.4286%,
+        var(--pride-dark-pink)    71.4286% 85.7143%,
+        var(--pride-dark-rose)    85.7143% 100%
+    );
+}
+
+/* 高亮标记 ==text== 用旗的浅橙 */
 .md-typeset mark {
-    background: rgba(239, 136, 98, 0.32);
+    background: var(--mark-bg);
     color: inherit;
     border-radius: 3px;
     padding: 0 2px;
-}
-[data-md-color-scheme="default"] .md-typeset mark {
-    background: rgba(239, 136, 98, 0.42);
 }
 
 /* ---------- 定制极细的科技感滚动条 ---------- */
@@ -99,8 +193,11 @@
 ::-webkit-scrollbar-track {
     background: transparent;
 }
+/* 滚动条滑块：橙 → 玫瑰的竖向旗带 */
 ::-webkit-scrollbar-thumb {
-    background-color: var(--md-primary-color);
+    background: linear-gradient(180deg,
+        var(--md-primary-color),
+        var(--md-accent-color));
     border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -130,30 +227,36 @@
     overflow: hidden;
     border: 1px solid var(--md-default-bg-color--light);
     background:
-        radial-gradient(ellipse at 18% 0%, rgba(239, 136, 98, 0.16), transparent 52%),
-        radial-gradient(ellipse at 82% 100%, rgba(255, 190, 130, 0.13), transparent 52%),
-        linear-gradient(180deg, rgba(239, 136, 98, 0.08), rgba(0, 0, 0, 0));
+        radial-gradient(ellipse at 18% 0%, var(--hero-glow-1), transparent 52%),
+        radial-gradient(ellipse at 82% 100%, var(--hero-glow-2), transparent 52%),
+        linear-gradient(180deg, var(--hero-veil), rgba(0, 0, 0, 0));
 }
-.hero-eyebrow {
+/* 注意：这些选择器必须带 .md-typeset 前缀。Material 自带的
+   .md-typeset h1 { font-weight: 300 } 特异性是 (0,1,1)，
+   单用 .hero-title (0,1,0) 会被它盖掉->标题变成细体，
+   细笔画 + 文字透明渐变 = 看起来发白、没有对比度。 */
+.md-typeset .hero-eyebrow {
     letter-spacing: 0.38em;
     font-size: 0.78rem;
     font-weight: 700;
-    color: var(--md-primary-fg-color);
+    color: var(--hero-eyebrow-color);
     opacity: 0.85;
     text-transform: uppercase;
     margin-bottom: 0.6rem;
 }
-.hero-title {
+.md-typeset .hero-title {
     font-size: 2.5rem;
     line-height: 1.4;
     font-weight: 800;
     margin: 0.4rem 0 0.9rem;
-    background: linear-gradient(135deg, var(--sunset-accent) 0%, #ffd08a 100%);
+    /* 不支持 background-clip:text 时退回实色 */
+    color: var(--hero-grad-to);
+    background: linear-gradient(135deg, var(--hero-grad-from) 0%, var(--hero-grad-to) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.hero-sub {
+.md-typeset .hero-sub {
     font-size: 1.05rem;
     color: var(--md-default-fg-color--light);
     margin-bottom: 1.2rem;
@@ -162,7 +265,9 @@
 /* ==========================================================================
    首页 · 光影收藏画廊
    ========================================================================== */
-.gallery-title {
+/* 同样要 .md-typeset 前缀：.md-typeset h2 (0,1,1) 会盖掉 .gallery-title (0,1,0)，
+   否则“光影收藏”会按普通大标题渲染（thin / 1.56em），而不是这里设计的小字距标题 */
+.md-typeset .gallery-title {
     text-align: center;
     font-size: 1.15rem;
     font-weight: 700;
@@ -208,7 +313,7 @@
 
 /* ---------- 响应式：小屏适配 ---------- */
 @media screen and (max-width: 700px) {
-    .hero-title { font-size: 1.9rem; }
+    .md-typeset .hero-title { font-size: 1.9rem; }
     .gallery { grid-template-columns: 1fr; }
 }
 
@@ -245,4 +350,69 @@
     color: var(--md-default-fg-color--light);
     font-style: italic;
     letter-spacing: 0.03em;
+}
+
+/* ==========================================================================
+   callout / admonition 归入旗色
+   Material 对每种 admonition 硬编码了蓝/绿等颜色（palette.css），
+   在橙玫瑰色系里会跳出来，所以按角色重新指一遍：标题底色用 12% 淡染。
+   ========================================================================== */
+.md-typeset :is(.admonition, details):is(.note, .info, .abstract, .question) {
+    border-color: var(--cl-note);
+}
+.md-typeset :is(.note, .info, .abstract, .question) > .admonition-title,
+.md-typeset :is(.note, .info, .abstract, .question) > summary {
+    background-color: color-mix(in srgb, var(--cl-note) 12%, transparent);
+}
+.md-typeset :is(.note, .info, .abstract, .question) > .admonition-title::before,
+.md-typeset :is(.note, .info, .abstract, .question) > summary::before {
+    background-color: var(--cl-note);
+}
+
+.md-typeset :is(.admonition, details):is(.tip, .success) {
+    border-color: var(--cl-tip);
+}
+.md-typeset :is(.tip, .success) > .admonition-title,
+.md-typeset :is(.tip, .success) > summary {
+    background-color: color-mix(in srgb, var(--cl-tip) 12%, transparent);
+}
+.md-typeset :is(.tip, .success) > .admonition-title::before,
+.md-typeset :is(.tip, .success) > summary::before {
+    background-color: var(--cl-tip);
+}
+
+.md-typeset :is(.admonition, details):is(.warning, .caution) {
+    border-color: var(--cl-warn);
+}
+.md-typeset :is(.warning, .caution) > .admonition-title,
+.md-typeset :is(.warning, .caution) > summary {
+    background-color: color-mix(in srgb, var(--cl-warn) 12%, transparent);
+}
+.md-typeset :is(.warning, .caution) > .admonition-title::before,
+.md-typeset :is(.warning, .caution) > summary::before {
+    background-color: var(--cl-warn);
+}
+
+.md-typeset :is(.admonition, details):is(.danger, .failure, .bug) {
+    border-color: var(--cl-danger);
+}
+.md-typeset :is(.danger, .failure, .bug) > .admonition-title,
+.md-typeset :is(.danger, .failure, .bug) > summary {
+    background-color: color-mix(in srgb, var(--cl-danger) 12%, transparent);
+}
+.md-typeset :is(.danger, .failure, .bug) > .admonition-title::before,
+.md-typeset :is(.danger, .failure, .bug) > summary::before {
+    background-color: var(--cl-danger);
+}
+
+.md-typeset :is(.admonition, details):is(.example, .quote) {
+    border-color: var(--cl-quote);
+}
+.md-typeset :is(.example, .quote) > .admonition-title,
+.md-typeset :is(.example, .quote) > summary {
+    background-color: color-mix(in srgb, var(--cl-quote) 12%, transparent);
+}
+.md-typeset :is(.example, .quote) > .admonition-title::before,
+.md-typeset :is(.example, .quote) > summary::before {
+    background-color: var(--cl-quote);
 }
