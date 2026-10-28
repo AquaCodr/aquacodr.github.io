@@ -1,7 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="20" fill="#3f51b5"/>
-  
-  <text x="50%" y="68%" font-family="'JetBrains Mono', 'Noto Sans SC', sans-serif" font-size="55" font-weight="bold" fill="#ffffff" text-anchor="middle">A</text>
-  
-  <line x1="30" y1="78" x2="70" y2="78" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+  <defs>
+    <!-- 女同骄傲旗：深橙 → 深玫瑰的对角渐变 -->
+    <linearGradient id="pride" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D52D00"/>
+      <stop offset="0.5" stop-color="#EF7627"/>
+      <stop offset="1" stop-color="#A30262"/>
+    </linearGradient>
+    <clipPath id="round"><rect width="100" height="100" rx="20"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="100" height="100" fill="url(#pride)"/>
+
+    <text x="50%" y="66%" font-family="'JetBrains Mono', 'Noto Sans SC', sans-serif"
+          font-size="55" font-weight="bold" fill="#ffffff" text-anchor="middle">A</text>
+
+    <!-- 底部七色细条 -->
+    <g>
+      <rect x="0"        y="84" width="14.29" height="6" fill="#D52D00"/>
+      <rect x="14.29"    y="84" width="14.29" height="6" fill="#EF7627"/>
+      <rect x="28.57"    y="84" width="14.29" height="6" fill="#FF9A56"/>
+      <rect x="42.86"    y="84" width="14.29" height="6" fill="#FFFFFF"/>
+      <rect x="57.14"    y="84" width="14.29" height="6" fill="#D162A4"/>
+      <rect x="71.43"    y="84" width="14.29" height="6" fill="#B55690"/>
+      <rect x="85.71"    y="84" width="14.29" height="6" fill="#A30262"/>
+    </g>
+  </g>
 </svg>

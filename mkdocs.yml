@@ -17,19 +17,21 @@ theme:
   # 字体：改用系统字体栈，避免 Google Fonts 在国内加载失败导致字体异常
   font: false
 
-  # 日夜间沉浸配色切换
+  # 日夜间沉浸配色切换（女同骄傲旗七色：深橙/橙/浅橙/白/粉/深粉/深玫瑰）
+  # 具体色值在 stylesheets/custom.css 里按「亮色走深色端、暗色走浅色端」分派；
+  # 这里只选同色系的 Material 预设名，用来决定顶栏文字用白还是黑（单字名称最稳）。
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: orange
+      accent: pink
       toggle:
         icon: material/weather-sunny
         name: 切换到夜间模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: cyan
+      primary: black
+      accent: pink
       toggle:
         icon: material/weather-night
         name: 切换到浅色模式
