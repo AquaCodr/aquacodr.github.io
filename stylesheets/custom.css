@@ -115,7 +115,7 @@ html [data-md-color-scheme="slate"][data-md-color-primary] {
     --cl-quote:                     var(--pride-dark-pink);
 }
 
-/* 暗色模式：橙 → 玫瑰辉光（纯 CSS，替代原 sunset-bg.jpg；不用再加载那张图） */
+/* 暗色模式：橙 → 玫瑰辉光（纯 CSS，已不含背景图） */
 [data-md-color-scheme="slate"] body {
     background:
         radial-gradient(ellipse 90% 50% at 18% -6%, rgba(239, 118, 39, 0.20), transparent 60%),
@@ -125,7 +125,9 @@ html [data-md-color-scheme="slate"][data-md-color-primary] {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-/* 想换回原来那张夕阳照片时，把上面整块替换为：
+/* 想换回原来那张夕阳照片（已删，从 git 历史取回）：
+   git show 3e56226:docs/assets/sunset-bg.jpg > docs/assets/sunset-bg.jpg
+   然后把上面整块替成：
    background:
         linear-gradient(180deg,
             rgba(40, 28, 34, 0.86) 0%,
@@ -231,6 +233,76 @@ html [data-md-color-scheme="slate"][data-md-color-primary] {
         radial-gradient(ellipse at 82% 100%, var(--hero-glow-2), transparent 52%),
         linear-gradient(180deg, var(--hero-veil), rgba(0, 0, 0, 0));
 }
+/* 首页 hero 一分为二：左边文字 + 入口胶囊，右边赤名莉香照片（之前是居中单栏，
+   照片卡只有 520px，两侧白白浪费 660px） */
+.hero--split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 22rem;
+    gap: 2.2rem;
+    align-items: center;
+    text-align: left;
+    padding: 2.8rem 2.6rem;
+}
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.4rem;
+}
+.hero-links a {
+    display: inline-block;
+    padding: 0.34rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--md-default-bg-color--light);
+    background: var(--md-default-bg-color--lightest);
+    color: var(--md-default-fg-color--light);
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: transform 0.25s, border-color 0.25s, color 0.25s, background 0.25s;
+}
+.hero-links a:hover {
+    transform: translateY(-2px);
+    border-color: var(--md-primary-color);
+    background: var(--md-default-bg-color--lighter);
+    color: var(--md-accent-fg-color);
+}
+/* 右侧照片卡（沿用原东京爱情故事卡片的交互）
+   用 flex 而不是 block：block 容器里 img 和 span 之间的换行空白会生成匿名行盒，
+   实测凭空多出 90 多 px，把 hero 撑得又高又空。 */
+.hero-feature {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+.hero-feature img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--md-default-bg-color--light);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                border-color 0.3s;
+}
+.hero-feature:hover img {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+    border-color: var(--md-primary-color);
+}
+.md-typeset .hero-feature-quote {
+    display: block;
+    margin-top: 0.85rem;
+    font-size: 0.78rem;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    color: var(--md-default-fg-color--light);
+    font-style: italic;
+    text-align: center;
+}
+
 /* 注意：这些选择器必须带 .md-typeset 前缀。Material 自带的
    .md-typeset h1 { font-weight: 300 } 特异性是 (0,1,1)，
    单用 .hero-title (0,1,0) 会被它盖掉->标题变成细体，
@@ -260,6 +332,8 @@ html [data-md-color-scheme="slate"][data-md-color-primary] {
     font-size: 1.05rem;
     color: var(--md-default-fg-color--light);
     margin-bottom: 1.2rem;
+    max-width: 26em;
+    text-wrap: balance;   /* 避免最后一行只剩一两个字 */
 }
 
 /* ==========================================================================
@@ -287,8 +361,8 @@ html [data-md-color-scheme="slate"][data-md-color-primary] {
 }
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
     margin: 0 0 2rem;
 }
 .gallery-item {
@@ -311,47 +385,33 @@ html [data-md-color-scheme="slate"][data-md-color-primary] {
     object-fit: cover;
 }
 
-/* ---------- 响应式：小屏适配 ---------- */
+/* ---------- 响应式 ---------- */
+/* 窄屏：hero 回到单栏居中，画廊改 2 列 */
+@media screen and (max-width: 1180px) {
+    .hero--split {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+        text-align: center;
+        padding: 2.4rem 1.4rem;
+    }
+    .hero-links { justify-content: center; }
+    /* 照片卡不再拉满整行：原图只有 512px 宽，拉宽到 876px 会发虚 */
+    .hero-feature {
+        width: 100%;
+        max-width: 22rem;
+        margin: 0 auto;
+    }
+    .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* 手机：画廊单列，标题再小一号保证「学以聚之，思以辨之」不被拆成三行 */
 @media screen and (max-width: 700px) {
-    .md-typeset .hero-title { font-size: 1.9rem; }
+    .md-typeset .hero-title { font-size: 1.5rem; }
     .gallery { grid-template-columns: 1fr; }
+    .hero-links a { font-size: 0.72rem; padding: 0.3rem 0.75rem; }
 }
 
-/* ==========================================================================
-   首页 · 东京爱情故事卡片
-   ========================================================================== */
-.tokyo-card {
-    max-width: 520px;
-    margin: 2.6rem auto 2rem;
-    text-align: center;
-}
-.tokyo-card-link {
-    display: block;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid var(--md-default-bg-color--light);
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-                box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-.tokyo-card-link:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
-    border-color: var(--md-primary-color);
-}
-.tokyo-card-link img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-.tokyo-quote {
-    margin-top: 1.2rem;
-    font-size: 1rem;
-    line-height: 1.9;
-    color: var(--md-default-fg-color--light);
-    font-style: italic;
-    letter-spacing: 0.03em;
-}
-
+/* 原「东京爱情故事卡片」已并入 hero 右侧（.hero-feature），
+   原来固定 520px 居中，在 1188px 的版面里两侧空出 660px。 */
 /* ==========================================================================
    callout / admonition 归入旗色
    Material 对每种 admonition 硬编码了蓝/绿等颜色（palette.css），
