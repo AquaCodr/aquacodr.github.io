@@ -51,7 +51,6 @@ theme:
     - content.tabs.link
     - content.tooltips
     - content.code.copy
-    - content.action.edit      # 配合 repo_url：每页显示"编辑此页"按钮
     - content.code.annotate
 
 # 左下角的版权声明
